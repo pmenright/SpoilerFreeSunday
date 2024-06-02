@@ -69,6 +69,8 @@ h3:nth-of-type(2) {
     align-items: flex-start;
     position: relative;
     z-index: 0; /* Ensure the tab container is below the table wrapper */
+    flex-wrap: nowrap; /* Prevent wrapping of tabs */
+    justify-content: flex-start; /* Left align tabs */
 }
 .buttonTab {
     padding: 10px 20px;
@@ -83,6 +85,7 @@ h3:nth-of-type(2) {
     z-index: 2; /* Ensure button tabs are above the tab container */
     display: inline-block;
     text-align: center;
+    margin-right: 1px; /* Small margin to separate tabs */
 }
 .buttonTab:hover {
     background-color: #b5b5b5; /* Hover color */
@@ -109,14 +112,9 @@ h3:nth-of-type(2) {
     h1, h3 {
         font-size: 1.2em;
     }
-    .tabContainer {
-        flex-direction: column;
-        align-items: stretch;
-    }
     .buttonTab {
         font-size: 0.8em;
         padding: 5px 10px;
-        margin-bottom: 5px; /* Add space between stacked tabs */
     }
 }
 
