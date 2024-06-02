@@ -97,3 +97,40 @@ h3:nth-of-type(2) {
 .buttonTab + .buttonTab {
     border-left: 1px solid transparent; /* Ensure no visible border between tabs */
 }
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    h1, h3 {
+        font-size: 1.2em;
+    }
+    .tabContainer {
+        flex-direction: column;
+    }
+    .buttonTab {
+        font-size: 0.8em;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
+    h1, h3 {
+        font-size: 1em;
+    }
+    .buttonTab {
+        font-size: 0.7em;
+        padding: 3px 5px;
+    }
+    table {
+        font-size: 0.8em;
+    }
+    th, td {
+        padding: 10px;
+    }
+}
