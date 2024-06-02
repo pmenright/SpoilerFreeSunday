@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Display Data</title>
+</head>
+<body>
+    <div id="img-center">
+        <img src="sfs.png" alt="Image">
+    </div>
+    <div id="img-center">
+        <h3 id="race-info">This week's race is [most recent race]. Stats update the Saturday before each race.</h3>
+        <h3 id="update-message">This page last updated </h3>
+    </div>
+    <div class="tabContainer">
+        <button class="buttonTab active" onclick="openTab('driverStandings', this)">Driver Standings</button>
+        <button class="buttonTab" onclick="openTab('constructorStandings', this)">Constructor Standings</button>
+        <button class="buttonTab" onclick="openTab('raceResults', this)">Race Results</button>
+    </div>
+    <div id="driverStandings" class="tab">
+        <div class="wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Driver</th>
+                        <th>Origin</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody id="driver-standings">
+                    <!-- Data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="constructorStandings" class="tab" style="display:none">
+        <div class="wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Constructor</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody id="constructor-standings">
+                    <!-- Data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="raceResults" class="tab" style="display:none">
+        <div class="wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Race</th>
+                        <th>Date</th>
+                        <th>Winner</th>
+                        <th>Constructor</th>
+                        <th>Points</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody id="race-results">
+                    <!-- Data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script>
+        async function displayCSVData(url, targetId, headers) {
+            const response = await fetch(url);
+            const data = await response.text();
+            const parsedData = Papa.parse(data.trim(), { header: headers }).data;
+            const tableBody = document.getElementById(targetId);
+
+            if (headers) {
+                parsedData.forEach(row => {
+                    const tr = document.createElement('tr');
+                    for (const key in row) {
+                        const cell = document.createElement('td');
+                        cell.textContent = row[key].trim();
+                        tr.appendChild(cell);
+                    }
+                    tableBody.appendChild(tr);
+                });
+            } else {
+                parsedData.slice(1).forEach(row => {
+                    const tr = document.createElement('tr');
+                    row.forEach(cellData => {
+                        const cell = document.createElement('td');
+                        cell.textContent = cellData.trim();
+                        tr.appendChild(cell);
+                    });
+                    tableBody.appendChild(tr);
+                });
+            }
+        }
+
+        async function displayLastUpdatedTimestamp() {
+            const response = await fetch('timestamp.txt');
+            const timestamp = await response.text();
+            const updateMessage = await document.getElementById('update-message');
+            updateMessage.textContent += timestamp;
+        }
+
+        async function updateRaceInfo() {
+            const response = await fetch('race_results.csv');
+            const data = await response.text();
+            const parsedData = Papa.parse(data.trim(), { header: true }).data;
+            const lastRace = parsedData[parsedData.length - 1].Race;
+            const raceInfo = document.getElementById('race-info');
+            raceInfo.textContent = `This week's race is ${lastRace}. Stats update the Saturday before each race.`;
+        }
+
+        function openTab(tabName, element) {
+            const tabs = document.getElementsByClassName("tab");
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+
+            const tabButtons = document.getElementsByClassName("buttonTab");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            element.classList.add("active");
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            openTab('driverStandings', document.querySelector('.buttonTab.active'));
+            displayCSVData('driver_standings.csv', 'driver-standings', true);
+            displayCSVData('constructor_standings.csv', 'constructor-standings', true);
+            displayCSVData('race_results.csv', 'race-results', true);
+            displayLastUpdatedTimestamp();
+            updateRaceInfo();
+        });
+    </script>
+</body>
+</html>

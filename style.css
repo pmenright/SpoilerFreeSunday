@@ -1,0 +1,99 @@
+body {
+    padding: 125px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+img {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#img-center {
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgb(250, 250, 250);
+    border-radius: 0 15px 15px 15px;
+    z-index: 1; /* Ensure table is on top */
+    position: relative;
+}
+.wrapper {
+    overflow-x: auto;
+    border-radius: 0 15px 15px 15px;
+    box-shadow: -3px 3px 1px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1; /* Ensures the table wrapper is above the tab container */
+}
+th, td {
+    padding: 15px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    text-align: left;
+}
+th {
+    background-color: #dadada;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 700;
+    color: rgb(45, 45, 45);
+}
+td {
+    color: rgb(95, 95, 95);
+}
+tbody tr:nth-child(odd) {
+    background-color: #f0f0f0; /* Slightly darker shade for odd rows */
+}
+h1 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+h3 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    text-align: left;
+}
+h3:nth-of-type(2) {
+    text-align: right;
+    font-style: italic;
+}
+#text-wrapper {
+    width: 80%;
+    display: inline-block;
+}
+.tabContainer {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    z-index: 0; /* Ensure the tab container is below the table wrapper */
+}
+.buttonTab {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    background-color: #a0a0a0;
+    border: none;
+    position: relative;
+    z-index: 2; /* Ensure button tabs are above the tab container */
+}
+.buttonTab:hover {
+    background-color: #b5b5b5; /* Hover color */
+}
+.buttonTab.active {
+    background-color: #dadada; /* Active tab color */
+}
+.buttonTab:first-child {
+    border-radius: 15px 0 0 0;
+    box-shadow: -3px 3px 1px rgba(0, 0, 0, 0.2);
+}
+.buttonTab:last-child {
+    border-radius: 0 15px 0 0;
+}
+.buttonTab + .buttonTab {
+    border-left: 1px solid transparent; /* Ensure no visible border between tabs */
+}
