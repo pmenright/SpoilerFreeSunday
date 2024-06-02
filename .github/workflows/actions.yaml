@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '50 21 * * *'  # Runs at 21:30 UTC every day
+    - cron: '13 22 * * *'  # Runs at 21:30 UTC every day
 
 jobs:
   build:
@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v3  # Updated to version that supports Node.js 20
 
       - name: Set up Python
-        uses: actions/setup-python@v4  # This version should support Node.js 20
+        uses: actions/setup-python@v4  # This version supports Node.js 20
         with:
           python-version: '3.9'  # Install the Python version needed
 
@@ -29,10 +29,11 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
+          git diff-index --quiet HEAD || git commit -m "updated logs"
 
       - name: Push changes
-        uses: github-actions-x/commit@v4  # Updated push action
+        uses: stefanzweifel/git-auto-commit-action@v4  # Updated push action
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: "updated logs"
           branch: main
+          file_pattern: "logs/*"
