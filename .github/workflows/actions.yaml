@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '28 20 * * *'  # Runs at 21:30 UTC every day
+    - cron: '28 20 * * *'  # Runs at 20:28 UTC every day
 
 jobs:
   build:
@@ -12,9 +12,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4  # This version supports Node.js 20
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.9'  # Install the Python version needed
+          python-version: '3.9'
 
       - name: Install Python packages
         run: |
@@ -24,16 +24,26 @@ jobs:
       - name: Execute Python script
         run: python3 main.py
 
+      - name: List files for debugging
+        run: ls -la
+
+      - name: Verify files for debugging
+        run: |
+          if [ ! -f driver_standings.csv ]; then echo "driver_standings.csv not found"; exit 1; fi
+          if [ ! -f constructor_standings.csv ]; then echo "constructor_standings.csv not found"; exit 1; fi
+          if [ ! -f race_results.csv ]; then echo "race_results.csv not found"; exit 1; fi
+          if [ ! -f timestamp.txt ]; then echo "timestamp.txt not found"; exit 1; fi
+
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add -A
+          git add driver_standings.csv constructor_standings.csv race_results.csv timestamp.txt
           git diff-index --quiet HEAD || git commit -m "updated logs"
 
       - name: Push changes
-        uses: stefanzweifel/git-auto-commit-action@v4  # Updated push action
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "updated logs"
           branch: main
-          file_pattern: "logs/*"
+          file_pattern: "*.csv timestamp.txt"
