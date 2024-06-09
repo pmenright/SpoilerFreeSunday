@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '27 21 * * *'  # '00 12 * * 6'
+    - cron: '46 00 * * *'  # Adjust this as needed
 
 jobs:
   build:
@@ -22,7 +22,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Execute Python script
-        run: python3 main.py
+        run: |
+          python3 main.py
+        continue-on-error: true  # Ensure we get logs even if the script fails
 
       - name: List files for debugging
         run: ls -la
@@ -34,7 +36,7 @@ jobs:
           if [ ! -f race_results.csv ]; then echo "race_results.csv not found"; exit 1; fi
           if [ ! -f timestamp.txt ]; then echo "timestamp.txt not found"; exit 1; fi
           if [ ! -f next_race.txt ]; then echo "next_race.txt not found"; exit 1; fi
-          
+
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
@@ -47,4 +49,4 @@ jobs:
         with:
           commit_message: "updated logs"
           branch: main
-          file_pattern: "*.csv timestamp.txt"
+          file_pattern: "*.csv timestamp.txt next_race.txt"
