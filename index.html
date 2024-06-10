@@ -108,17 +108,15 @@
         async function displayLastUpdatedTimestamp() {
             const response = await fetch('timestamp.txt');
             const timestamp = await response.text();
-            const updateMessage = await document.getElementById('update-message');
+            const updateMessage = document.getElementById('update-message');
             updateMessage.textContent += timestamp;
         }
 
         async function updateRaceInfo() {
-            const response = await fetch('race_results.csv');
-            const data = await response.text();
-            const parsedData = Papa.parse(data.trim(), { header: true }).data;
-            const lastRace = parsedData[parsedData.length - 1].Race;
+            const response = await fetch('next_race.txt');
+            const nextRace = await response.text();
             const raceInfo = document.getElementById('race-info');
-            raceInfo.textContent = `This week's race is ${lastRace}. Stats update the Saturday before each race.`;
+            raceInfo.textContent = `This week's race is ${nextRace}. Stats update the Saturday before each race.`;
         }
 
         function openTab(tabName, element) {
@@ -135,14 +133,4 @@
             element.classList.add("active");
         }
 
-        document.addEventListener("DOMContentLoaded", () => {
-            openTab('driverStandings', document.querySelector('.buttonTab.active'));
-            displayCSVData('driver_standings.csv', 'driver-standings', true);
-            displayCSVData('constructor_standings.csv', 'constructor-standings', true);
-            displayCSVData('race_results.csv', 'race-results', true);
-            displayLastUpdatedTimestamp();
-            updateRaceInfo();
-        });
-    </script>
-</body>
-</html>
+        document.addEventListener("DOMContent
