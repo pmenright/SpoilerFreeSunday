@@ -33,12 +33,14 @@ jobs:
           if [ ! -f constructor_standings.csv ]; then echo "constructor_standings.csv not found"; exit 1; fi
           if [ ! -f race_results.csv ]; then echo "race_results.csv not found"; exit 1; fi
           if [ ! -f timestamp.txt ]; then echo "timestamp.txt not found"; exit 1; fi
+          if [ ! -f next_race.txt ]; then echo "next_race.txt not found"; exit 1; fi
+
 
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add driver_standings.csv constructor_standings.csv race_results.csv timestamp.txt
+          git add driver_standings.csv constructor_standings.csv race_results.csv timestamp.txt next_race.txt
           git diff-index --quiet HEAD || git commit -m "updated logs"
 
       - name: Push changes
