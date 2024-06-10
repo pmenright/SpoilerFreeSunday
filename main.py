@@ -34,34 +34,9 @@ scrape_and_write_csv(constructor_url, 'constructor_standings.csv', ['Position', 
 # Scrape and write race results
 scrape_and_write_csv(race_url, 'race_results.csv', ['Race', 'Date', 'Winner', 'Constructor', 'Laps', 'Time'], 'race_rows')
 
-# Load season schedule
-season_schedule = []
-try:
-    with open('seasonSchedule.csv', 'r') as schedule_file:
-        csvreader = csv.reader(schedule_file)
-        next(csvreader)  # Skip header
-        for row in csvreader:
-            season_schedule.append(row)
-except Exception as e:
-    print(f'Error loading seasonSchedule.csv: {e}')
-
-# Determine next race
-round_number = len(season_schedule) + 1
-next_race = season_schedule[round_number - 1][1]  # Assuming the location is in the second column
-
-# Write next race info to file
-try:
-    with open('next_race.txt', 'w') as next_race_file:
-        next_race_file.write(next_race)
-    print('Next race information has been exported to next_race.txt')
-except Exception as e:
-    print(f'Error writing next_race.txt: {e}')
-
 # Write timestamp
 timestamp = datetime.datetime.now().strftime('%d %b %Y, %H:%M:%S')
-try:
-    with open('timestamp.txt', 'w') as timestamp_file:
-        timestamp_file.write(timestamp)
-    print('Timestamp has been exported to timestamp.txt')
-except Exception as e:
-    print(f'Error writing timestamp.txt: {e}')
+with open('timestamp.txt', 'w') as timestamp_file:
+    timestamp_file.write(timestamp)
+
+print('Timestamp has been exported to timestamp.txt')
