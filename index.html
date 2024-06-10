@@ -108,7 +108,7 @@
         async function displayLastUpdatedTimestamp() {
             const response = await fetch('timestamp.txt');
             const timestamp = await response.text();
-            const updateMessage = await document.getElementById('update-message');
+            const updateMessage = document.getElementById('update-message');
             updateMessage.textContent += timestamp;
         }
 
@@ -136,4 +136,11 @@
         document.addEventListener("DOMContentLoaded", () => {
             openTab('driverStandings', document.querySelector('.buttonTab.active'));
             displayCSVData('driver_standings.csv', 'driver-standings', true);
-            displayCSV
+            displayCSVData('constructor_standings.csv', 'constructor-standings', true);
+            displayCSVData('race_results.csv', 'race-results', true);
+            displayLastUpdatedTimestamp();
+            updateRaceInfo();
+        });
+    </script>
+</body>
+</html>
