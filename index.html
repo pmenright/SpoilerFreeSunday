@@ -113,10 +113,12 @@
         }
 
         async function updateRaceInfo() {
-            const response = await fetch('next_race.txt');
-            const nextRace = await response.text();
+            const response = await fetch('race_results.csv');
+            const data = await response.text();
+            const parsedData = Papa.parse(data.trim(), { header: true }).data;
+            const lastRace = parsedData[parsedData.length - 1].Race;
             const raceInfo = document.getElementById('race-info');
-            raceInfo.textContent = `This week's race is ${nextRace}. Stats update the Saturday before each race.`;
+            raceInfo.textContent = `This week's race is ${lastRace}. Stats update the Saturday before each race.`;
         }
 
         function openTab(tabName, element) {
