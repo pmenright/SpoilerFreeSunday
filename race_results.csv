@@ -1,25 +1,28 @@
-Race,Date,Winner,Constructor,Laps,Time
+Race,Date,Winner,Constructor,Time
 Bahrain,02 Mar 2024,"Max
 Verstappen
-VER",Red Bull Racing Honda RBPT,57,1:31:44.742
+VER",Red Bull Racing Honda RBPT,1:31:44.742
 Saudi Arabia,09 Mar 2024,"Max
 Verstappen
-VER",Red Bull Racing Honda RBPT,50,1:20:43.273
+VER",Red Bull Racing Honda RBPT,1:20:43.273
 Australia,24 Mar 2024,"Carlos
 Sainz
-SAI",Ferrari,58,1:20:26.843
+SAI",Ferrari,1:20:26.843
 Japan,07 Apr 2024,"Max
 Verstappen
-VER",Red Bull Racing Honda RBPT,53,1:54:23.566
+VER",Red Bull Racing Honda RBPT,1:54:23.566
 China,21 Apr 2024,"Max
 Verstappen
-VER",Red Bull Racing Honda RBPT,56,1:40:52.554
+VER",Red Bull Racing Honda RBPT,1:40:52.554
 Miami,05 May 2024,"Lando
 Norris
-NOR",McLaren Mercedes,57,1:30:49.876
+NOR",McLaren Mercedes,1:30:49.876
 Emilia Romagna,19 May 2024,"Max
 Verstappen
-VER",Red Bull Racing Honda RBPT,63,1:25:25.252
+VER",Red Bull Racing Honda RBPT,1:25:25.252
 Monaco,26 May 2024,"Charles
 Leclerc
-LEC",Ferrari,78,2:23:15.554
+LEC",Ferrari,2:23:15.554
+Canada,09 Jun 2024,"Max
+Verstappen
+VER",Red Bull Racing Honda RBPT,1:45:47.927
