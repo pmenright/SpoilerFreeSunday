@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '34 21 * * *'  # Runs at 20:28 UTC every day
+    - cron: '45 21 * * *'  # Runs at 21:34 UTC every day
 
 jobs:
   build:
@@ -35,6 +35,8 @@ jobs:
           if [ ! -f timestamp.txt ]; then echo "timestamp.txt not found"; exit 1; fi
           if [ ! -f next_race.txt ]; then echo "next_race.txt not found"; exit 1; fi
 
+      - name: Show contents of timestamp.txt for debugging
+        run: cat timestamp.txt
 
       - name: Commit files
         run: |
