@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '00 12 * * 6'  # Runs at 21:34 UTC every day
+    - cron: '00 12 * * 6'
   workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
@@ -36,8 +36,18 @@ jobs:
           if [ ! -f timestamp.txt ]; then echo "timestamp.txt not found"; exit 1; fi
           if [ ! -f next_race.txt ]; then echo "next_race.txt not found"; exit 1; fi
 
-      - name: Show contents of timestamp.txt for debugging
-        run: cat timestamp.txt
+      - name: Show contents of files for debugging
+        run: |
+          echo "Contents of driver_standings.csv:"
+          cat driver_standings.csv
+          echo "Contents of constructor_standings.csv:"
+          cat constructor_standings.csv
+          echo "Contents of race_results.csv:"
+          cat race_results.csv
+          echo "Contents of timestamp.txt:"
+          cat timestamp.txt
+          echo "Contents of next_race.txt:"
+          cat next_race.txt
 
       - name: Commit files
         run: |
@@ -51,4 +61,4 @@ jobs:
         with:
           commit_message: "updated logs"
           branch: main
-          file_pattern: "*.csv *.txt"
+          file_pattern: "*.csv, *.txt"
