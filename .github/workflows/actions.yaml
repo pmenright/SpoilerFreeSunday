@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '00 12 * * 6'
+    - cron: '34 21 * * *'  # Runs at 21:34 UTC every day
   workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
@@ -53,12 +53,9 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add driver_standings.csv constructor_standings.csv race_results.csv timestamp.txt next_race.txt
-          git diff-index --quiet HEAD || git commit -m "updated logs"
+          git add -A
+          git commit -m "updated logs" || echo "No changes to commit"
 
       - name: Push changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "updated logs"
-          branch: main
-          file_pattern: "*.csv, *.txt"
+        run: |
+          git push origin main || echo "No changes to push"
