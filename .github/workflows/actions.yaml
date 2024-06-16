@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '01 05 * * *'  # Runs at 20:28 UTC every day
+    - cron: '34 21 * * *'  # Runs at 20:28 UTC every day
 
 jobs:
   build:
@@ -48,4 +48,4 @@ jobs:
         with:
           commit_message: "updated logs"
           branch: main
-          file_pattern: "*.csv timestamp.txt"
+          file_pattern: "*.csv *.txt"
