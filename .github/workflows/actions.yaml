@@ -9,10 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository content
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.SFS_PAT }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
