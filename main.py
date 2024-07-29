@@ -12,8 +12,16 @@ race_url = 'https://www.formula1.com/en/results.html/2024/races.html'
 # Function to scrape and write CSV
 def scrape_and_write_csv(url, filename, headers, cell_indices):
     response = requests.get(url)
+    if response.status_code != 200:
+        print(f"Failed to retrieve URL: {url}, Status code: {response.status_code}")
+        return
+    
     soup = BeautifulSoup(response.text, 'html.parser')
     table = soup.find('table', class_='resultsarchive-table')
+    if table is None:
+        print(f"Error: Could not find the table with class 'resultsarchive-table' on {url}")
+        return
+    
     rows = table.find_all('tr')
     
     with open(filename, 'w', newline='') as csvfile:
