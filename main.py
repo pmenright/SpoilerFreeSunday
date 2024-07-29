@@ -5,9 +5,8 @@ import csv
 import datetime
 
 # Define URLs
-driver_url = 'https://www.formula1.com/en/results.html/2024/drivers.html'
-constructor_url = 'https://www.formula1.com/en/results.html/2024/team.html'
-race_url = 'https://www.formula1.com/en/results.html/2024/races.html'
+driver_url = 'https://www.formula1.com/en/results/2024/drivers'
+constructor_url = 'https://www.formula1.com/en/results/2024/team'
 
 # Function to scrape and write CSV
 def scrape_and_write_csv(url, filename, headers, cell_indices):
@@ -17,9 +16,10 @@ def scrape_and_write_csv(url, filename, headers, cell_indices):
         return
     
     soup = BeautifulSoup(response.text, 'html.parser')
-    table = soup.find('table', class_='resultsarchive-table')
+    table = soup.find('table', class_='f1-table-with-data')
     if table is None:
         print(f"Error: Could not find the table with class 'resultsarchive-table' on {url}")
+        print(f"Here is a snippet of the HTML response for debugging:\n{soup.prettify()[:2000]}")
         return
     
     rows = table.find_all('tr')
@@ -39,9 +39,6 @@ scrape_and_write_csv(driver_url, 'driver_standings.csv', ['Position', 'Driver', 
 
 # Scrape and write constructor standings
 scrape_and_write_csv(constructor_url, 'constructor_standings.csv', ['Position', 'Constructor', 'Points'], [1, 2, 3])
-
-# Scrape and write race results
-scrape_and_write_csv(race_url, 'race_results.csv', ['Race', 'Date', 'Winner', 'Constructor', 'Time'], [1, 2, 3, 4, 6])
 
 # Load race results to count entries
 race_results = []
