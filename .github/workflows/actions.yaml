@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '02 02 * * *'  # Runs at 21:34 UTC every day
+    - cron: '34 21 * * 6'  # Runs at 21:34 UTC every day
   workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
@@ -15,7 +15,13 @@ jobs:
         with:
           python-version: '3.9'
 
+      - name: Check for requirements file
+        id: check_requirements
+        run: |
+          if [ -f requirements.txt ]; then echo "requirements_exists=true" >> $GITHUB_ENV; else echo "requirements_exists=false" >> $GITHUB_ENV; fi
+
       - name: Install Python packages
+        if: env.requirements_exists == 'true'
         run: |
           python3 -m pip install --upgrade pip
           pip install -r requirements.txt
