@@ -1,64 +1,22 @@
 Position,Driver,Nationality,Team,Points
-1,"Vax
-Merstappen
-MER",NED,Red Bull Racing Honda RBPT,194
-2,"Charles
-Leclerc
-LEC",MON,Ferrari,138
-3,"Lando
-Norris
-NOR",GBR,McLaren Mercedes,131
-4,"Carlos
-Sainz
-SAI",ESP,Ferrari,108
-5,"Sergio
-Perez
-PER",MEX,Red Bull Racing Honda RBPT,107
-6,"Oscar
-Piastri
-PIA",AUS,McLaren Mercedes,81
-7,"George
-Russell
-RUS",GBR,Mercedes,69
-8,"Lewis
-Hamilton
-HAM",GBR,Mercedes,55
-9,"Fernando
-Alonso
-ALO",ESP,Aston Martin Aramco Mercedes,41
-10,"Yuki
-Tsunoda
-TSU",JPN,RB Honda RBPT,19
-11,"Lance
-Stroll
-STR",CAN,Aston Martin Aramco Mercedes,17
-12,"Daniel
-Ricciardo
-RIC",AUS,RB Honda RBPT,9
-13,"Oliver
-Bearman
-BEA",GBR,Ferrari,6
-14,"Nico
-Hulkenberg
-HUL",GER,Haas Ferrari,6
-15,"Pierre
-Gasly
-GAS",FRA,Alpine Renault,3
-16,"Alexander
-Albon
-ALB",THA,Williams Mercedes,2
-17,"Esteban
-Ocon
-OCO",FRA,Alpine Renault,2
-18,"Kevin
-Magnussen
-MAG",DEN,Haas Ferrari,1
-19,"Zhou
-Guanyu
-ZHO",CHN,Kick Sauber Ferrari,0
-20,"Valtteri
-Bottas
-BOT",FIN,Kick Sauber Ferrari,0
-21,"Logan
-Sargeant
-SAR",USA,Williams Mercedes,0
+1,Max VerstappenVER,NED,Red Bull Racing Honda RBPT,277
+2,Lando NorrisNOR,GBR,McLaren Mercedes,199
+3,Charles LeclercLEC,MON,Ferrari,177
+4,Oscar PiastriPIA,AUS,McLaren Mercedes,167
+5,Carlos SainzSAI,ESP,Ferrari,162
+6,Lewis HamiltonHAM,GBR,Mercedes,150
+7,Sergio PerezPER,MEX,Red Bull Racing Honda RBPT,131
+8,George RussellRUS,GBR,Mercedes,116
+9,Fernando AlonsoALO,ESP,Aston Martin Aramco Mercedes,49
+10,Lance StrollSTR,CAN,Aston Martin Aramco Mercedes,24
+11,Nico HulkenbergHUL,GER,Haas Ferrari,22
+12,Yuki TsunodaTSU,JPN,RB Honda RBPT,22
+13,Daniel RicciardoRIC,AUS,RB Honda RBPT,12
+14,Oliver BearmanBEA,GBR,Ferrari,6
+15,Pierre GaslyGAS,FRA,Alpine Renault,6
+16,Kevin MagnussenMAG,DEN,Haas Ferrari,5
+17,Esteban OconOCO,FRA,Alpine Renault,5
+18,Alexander AlbonALB,THA,Williams Mercedes,4
+19,Zhou GuanyuZHO,CHN,Kick Sauber Ferrari,0
+20,Logan SargeantSAR,USA,Williams Mercedes,0
+21,Valtteri BottasBOT,FIN,Kick Sauber Ferrari,0
