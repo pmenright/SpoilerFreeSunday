@@ -67,4 +67,13 @@ jobs:
 
       - name: Push changes
         run: |
-          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/pmenright/SpoilerFreeSunday.git main || echo "No changes to push"
+          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/pmenright/SpoilerFreeSunday.git main
+        continue-on-error: false
+
+      - name: Debug push errors
+        if: failure()
+        run: |
+          echo "Push failed. Checking recent commits..."
+          git log -3 --oneline
+          echo "Checking remote status..."
+          git remote show origin
