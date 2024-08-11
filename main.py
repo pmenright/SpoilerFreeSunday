@@ -65,6 +65,48 @@ tasks = [
 for task in tasks:
     scrape_and_write_csv(*task)
 
+# Modify driver_standings.csv to remove the last three characters from the second column
+try:
+    with open('driver_standings.csv', 'r') as file:
+        reader = csv.reader(file)
+        headers = next(reader)
+        rows = [row for row in reader]
+
+    # Modify the second column of each row
+    for row in rows:
+        row[1] = row[1][:-3] if len(row[1]) > 3 else row[1]
+
+    # Write the modified data back to the file
+    with open('driver_standings.csv', 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(headers)
+        writer.writerows(rows)
+
+    print('driver_standings.csv has been updated.')
+except Exception as e:
+    print(f"Error processing driver_standings.csv: {e}")
+
+# Modify race_results.csv to remove the last three characters from the third column
+try:
+    with open('race_results.csv', 'r') as file:
+        reader = csv.reader(file)
+        headers = next(reader)
+        rows = [row for row in reader]
+
+    # Modify the third column of each row
+    for row in rows:
+        row[2] = row[2][:-3] if len(row[2]) > 3 else row[2]
+
+    # Write the modified data back to the file
+    with open('race_results.csv', 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(headers)
+        writer.writerows(rows)
+
+    print('race_results.csv has been updated.')
+except Exception as e:
+    print(f"Error processing race_results.csv: {e}")
+
 # Load race results to count entries
 race_results = []
 try:
@@ -77,16 +119,12 @@ except FileNotFoundError:
 except IOError as e:
     print(f"Error reading file race_results.csv: {e}")
 
-
 # Count the number of races
 round_number = len(race_results)
 
 # Load season schedule
 season_schedule = []
 try:
-
-# /mnt/data/seasonSchedule.csv
-
     with open('seasonSchedule.csv', 'r') as schedule_file:
         csvreader = csv.reader(schedule_file)
         next(csvreader)  # Skip header
