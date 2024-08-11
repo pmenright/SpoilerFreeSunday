@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <title>Spoiler Free Sunday</title>
+    <title>Display Data</title>
 </head>
 <body>
     <div id="img-center">
@@ -85,6 +85,11 @@
             const parsedData = Papa.parse(data.trim(), { header: headers }).data;
             const tableBody = document.getElementById(targetId);
 
+            // Reverse the data order if displaying race results
+            if (targetId === 'race-results') {
+                parsedData.reverse();
+            }
+
             if (headers) {
                 parsedData.forEach(row => {
                     const tr = document.createElement('tr');
@@ -140,7 +145,7 @@
             openTab('driverStandings', document.querySelector('.buttonTab.active'));
             displayCSVData('driver_standings.csv', 'driver-standings', true);
             displayCSVData('constructor_standings.csv', 'constructor-standings', true);
-            displayCSVData('race_results.csv', 'race-results', true);
+            displayCSVData('race_results.csv', 'race-results', true); // This will now display in reverse order
             displayLastUpdatedTimestamp();
             updateRaceInfo();
         });
