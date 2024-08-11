@@ -67,7 +67,7 @@ jobs:
 
       - name: Push changes
         run: |
-          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/pmenright/SpoilerFreeSunday.git main
+          git push https://x-access-token:${{ secrets.SFS_PAT }}@github.com/pmenright/SpoilerFreeSunday.git main
         continue-on-error: false
 
       - name: Debug push errors
