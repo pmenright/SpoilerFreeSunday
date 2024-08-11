@@ -7,7 +7,7 @@ import datetime
 # Constants for cell indices (magic numbers)
 DRIVER_CELL_INDICES = [0, 1, 2, 3, 4]
 CONSTRUCTOR_CELL_INDICES = [0, 1, 2]
-RACE_CELL_INDICES = [0, 1, 2, 3, 4]
+RACE_CELL_INDICES = [0, 1, 2, 3, 5]
 
 # Get the current year
 current_year = datetime.datetime.now().year
