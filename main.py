@@ -4,52 +4,79 @@ from bs4 import BeautifulSoup
 import csv
 import datetime
 
-# Define URLs
-driver_url = 'https://www.formula1.com/en/results/2024/drivers'
-constructor_url = 'https://www.formula1.com/en/results/2024/team'
+# Constants for cell indices (magic numbers)
+DRIVER_CELL_INDICES = [0, 1, 2, 3, 4]
+CONSTRUCTOR_CELL_INDICES = [0, 1, 2]
+RACE_CELL_INDICES = [0, 1, 2, 3, 4]
 
-# Function to scrape and write CSV
+# Get the current year
+current_year = datetime.datetime.now().year
+
+# URLs with dynamic year
+driver_url = f'https://www.formula1.com/en/results/{current_year}/drivers'
+constructor_url = f'https://www.formula1.com/en/results/{current_year}/team'
+race_url = f'https://www.formula1.com/en/results/{current_year}/races'
+
 def scrape_and_write_csv(url, filename, headers, cell_indices):
-    response = requests.get(url)
-    if response.status_code != 200:
-        print(f"Failed to retrieve URL: {url}, Status code: {response.status_code}")
+    """
+    Scrapes a table from the given URL and writes it to a CSV file.
+
+    :param url: URL of the webpage to scrape.
+    :param filename: Name of the CSV file to save the data.
+    :param headers: List of headers for the CSV file.
+    :param cell_indices: List of indices to extract data from the table's cells.
+    """
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Raises an exception for HTTP errors
+    except requests.exceptions.RequestException as e:
+        print(f"Failed to retrieve URL: {url}, Error: {e}")
         return
-    
+
     soup = BeautifulSoup(response.text, 'html.parser')
     table = soup.find('table', class_='f1-table-with-data')
     if table is None:
-        print(f"Error: Could not find the table with class 'resultsarchive-table' on {url}")
-        print(f"Here is a snippet of the HTML response for debugging:\n{soup.prettify()[:2000]}")
+        print(f"Error: Could not find the table with class 'f1-table-with-data' on {url}")
         return
-    
+
     rows = table.find_all('tr')
     
-    with open(filename, 'w', newline='') as csvfile:
-        csvwriter = csv.writer(csvfile)
-        csvwriter.writerow(headers)
-        for row in rows:
-            cells = row.find_all('td')
-            if len(cells) > 0:
-                row_data = [cells[i].text.strip() if i < len(cells) else '' for i in cell_indices]
-                csvwriter.writerow(row_data)
-    print(f'{filename} has been exported.')
+    try:
+        with open(filename, 'w', newline='') as csvfile:
+            csvwriter = csv.writer(csvfile)
+            csvwriter.writerow(headers)
+            for row in rows:
+                cells = row.find_all('td')
+                if len(cells) > 0:
+                    row_data = [cells[i].text.strip() if i < len(cells) else '' for i in cell_indices]
+                    csvwriter.writerow(row_data)
+        print(f'{filename} has been exported.')
+    except IOError as e:
+        print(f"Error writing to file {filename}: {e}")
 
-# Scrape and write driver standings
-scrape_and_write_csv(driver_url, 'driver_standings.csv', ['Position', 'Driver', 'Nationality', 'Team', 'Points'], [1, 2, 3, 4, 5])
+# Define tasks
+tasks = [
+    (driver_url, 'driver_standings.csv', ['Position', 'Driver', 'Nationality', 'Team', 'Points'], DRIVER_CELL_INDICES),
+    (constructor_url, 'constructor_standings.csv', ['Position', 'Constructor', 'Points'], CONSTRUCTOR_CELL_INDICES),
+    (race_url, 'race_results.csv', ['Race', 'Date', 'Winner', 'Constructor', 'Time'], RACE_CELL_INDICES)
+]
 
-# Scrape and write constructor standings
-scrape_and_write_csv(constructor_url, 'constructor_standings.csv', ['Position', 'Constructor', 'Points'], [1, 2, 3])
+# Execute scraping tasks
+for task in tasks:
+    scrape_and_write_csv(*task)
 
 # Load race results to count entries
 race_results = []
 try:
     with open('race_results.csv', 'r') as race_file:
         csvreader = csv.reader(race_file)
-        next(csvreader)  # Skip header
-        for row in csvreader:
-            race_results.append(row)
-except Exception as e:
-    print(f'Error loading race_results.csv: {e}')
+        race_results = list(csvreader)
+        print(f"Total races recorded: {len(race_results) - 1}")  # Exclude header row
+except FileNotFoundError:
+    print("race_results.csv file not found.")
+except IOError as e:
+    print(f"Error reading file race_results.csv: {e}")
+
 
 # Count the number of races
 round_number = len(race_results) + 1
@@ -57,7 +84,10 @@ round_number = len(race_results) + 1
 # Load season schedule
 season_schedule = []
 try:
-    with open('/mnt/data/seasonSchedule.csv', 'r') as schedule_file:
+
+# /mnt/data/seasonSchedule.csv
+
+    with open('seasonSchedule.csv', 'r') as schedule_file:
         csvreader = csv.reader(schedule_file)
         next(csvreader)  # Skip header
         for row in csvreader:
