@@ -9,6 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -25,6 +27,9 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Change to script directory
+        run: cd ${{ github.workspace }}/SpoilerFreeSunday  # Adjust this path to match your repository structure
 
       - name: Execute Python script
         run: python3 main.py
