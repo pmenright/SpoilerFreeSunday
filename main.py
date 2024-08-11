@@ -79,7 +79,7 @@ except IOError as e:
 
 
 # Count the number of races
-round_number = len(race_results) + 1
+round_number = len(race_results)
 
 # Load season schedule
 season_schedule = []
