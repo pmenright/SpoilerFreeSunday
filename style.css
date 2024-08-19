@@ -184,6 +184,12 @@ h2 {
         margin-top: 20px;
     }
 
+    .tagContainer {
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+
     .thisWeekTag {
         height: 25px;
         padding: 0;
