@@ -126,7 +126,7 @@
                     // Ensure the date format in CSV is compatible (YYYY-MM-DD)
                     let nextRace = null;
                     for (let i = 0; i < parsedData.length; i++) {
-                        const raceDate = new Date(parsedData[i]["Check Date"].trim()); // Use "Check Date" column
+                        const raceDate = new Date(parsedData[i]["Check Date"].trim());
                         console.log("Checking race:", parsedData[i].Race, "on", raceDate); // Debug each race and its date
     
                         if (!isNaN(raceDate.getTime()) && raceDate >= today) {
@@ -138,7 +138,6 @@
     
                     // If we found a race, update the HTML
                     if (nextRace) {
-                        // Populate race information using correct class names
                         const raceElement = document.getElementById('cyanText');
                         const roundElement = document.getElementById('magentaText');
                         const trackElement = document.querySelector('.trackName');
@@ -160,7 +159,7 @@
                         // Update the track map image if the element exists
                         if (trackMapElement) {
                             const trackImageName = nextRace.Location.replace(/\s+/g, '-').toLowerCase();
-                            trackMapElement.src = `tracks/${trackImageName}.svg`;
+                            trackMapElement.src = `https://raw.githubusercontent.com/pmenright/SpoilerFreeSunday/main/tracks/${trackImageName}.svg`;
                         } else {
                             console.error("Track map element not found.");
                         }
