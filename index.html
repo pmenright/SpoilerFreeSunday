@@ -160,7 +160,7 @@
     
                         // Update the track map image if the element exists
                         if (trackMapElement) {
-                            const trackImageName = nextRace.Location.replace(/\s+/g, '-').toLowerCase();
+                            const trackImageName = nextRace.Location.replace(/\s+/g, '-');
                             const trackImageUrl = `https://raw.githubusercontent.com/pmenright/SpoilerFreeSunday/main/tracks/${trackImageName}.svg`;
                             
                             console.log("Loading track map from:", trackImageUrl);
