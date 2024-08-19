@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg3942" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" version="1.1" viewBox="0 0 1408.5 517.7">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 56px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        fill: #000;
+      }
+
+      .cls-1, .cls-2, .cls-4, .cls-7, .cls-10, .cls-11, .cls-12, .cls-8, .cls-9 {
+        isolation: isolate;
+      }
+
+      .cls-1, .cls-2, .cls-4, .cls-10, .cls-11, .cls-8, .cls-9 {
+        font-family: TimesNewRomanPSMT, 'Times New Roman';
+      }
+
+      .cls-2 {
+        font-size: 48px;
+      }
+
+      .cls-13 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-10, .cls-11, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26 {
+        fill: none;
+      }
+
+      .cls-14, .cls-5, .cls-27 {
+        stroke-width: 0px;
+      }
+
+      .cls-15, .cls-16, .cls-18, .cls-19, .cls-24 {
+        stroke-width: 10px;
+      }
+
+      .cls-15, .cls-18 {
+        stroke: #ccc;
+      }
+
+      .cls-3 {
+        stroke-width: .6px;
+      }
+
+      .cls-3, .cls-17, .cls-19, .cls-6, .cls-10, .cls-11, .cls-20, .cls-22, .cls-23, .cls-26 {
+        stroke: #fff;
+      }
+
+      .cls-3, .cls-6, .cls-28, .cls-29, .cls-30 {
+        stroke-linecap: round;
+      }
+
+      .cls-4 {
+        font-size: 40px;
+      }
+
+      .cls-16 {
+        stroke: #c8c8c8;
+      }
+
+      .cls-16, .cls-17, .cls-18, .cls-6, .cls-20, .cls-21, .cls-28, .cls-29, .cls-22, .cls-23, .cls-24, .cls-30 {
+        stroke-linejoin: round;
+      }
+
+      .cls-17 {
+        stroke-width: 4px;
+      }
+
+      .cls-6 {
+        stroke-width: 1px;
+      }
+
+      .cls-7 {
+        font-family: ArialMT, Arial;
+        font-size: 35px;
+      }
+
+      .cls-10 {
+        stroke-miterlimit: 6.4;
+        stroke-width: 1px;
+      }
+
+      .cls-10, .cls-8 {
+        font-size: 103.1px;
+      }
+
+      .cls-11 {
+        stroke-width: 2px;
+      }
+
+      .cls-11, .cls-9 {
+        font-size: 22px;
+      }
+
+      .cls-20 {
+        stroke-width: 12px;
+      }
+
+      .cls-21 {
+        stroke-width: 5.8px;
+      }
+
+      .cls-21, .cls-24, .cls-30 {
+        stroke: #000;
+      }
+
+      .cls-28 {
+        stroke-width: 2px;
+      }
+
+      .cls-28, .cls-29 {
+        stroke: #181818;
+      }
+
+      .cls-28, .cls-29, .cls-27 {
+        fill: #fff;
+      }
+
+      .cls-29 {
+        stroke-width: 2px;
+      }
+
+      .cls-22 {
+        stroke-width: 12px;
+      }
+
+      .cls-23 {
+        stroke-width: 7.8px;
+      }
+
+      .cls-30 {
+        fill: url(#pattern4166);
+        stroke-width: .7px;
+      }
+
+      .cls-25 {
+        stroke: #c9c9c9;
+        stroke-width: 9.5px;
+      }
+
+      .cls-26 {
+        stroke-width: 11.5px;
+      }
+    </style>
+    <pattern id="pattern4166" x="0" y="0" width="18.2" height="18.1" patternTransform="translate(-2165.4 -1937.3) rotate(.4) scale(.6)" patternUnits="userSpaceOnUse" viewBox="0 0 18.2 18.1">
+      <g>
+        <rect class="cls-14" width="18.2" height="18.1"/>
+        <g id="g4907">
+          <rect id="rect4899" class="cls-5" y="0" width="18.2" height="18.1"/>
+          <rect id="rect4903" class="cls-27" y="9.1" width="9.1" height="9.1"/>
+          <rect id="rect4905" class="cls-27" x="9.1" y="0" width="9.1" height="9.1"/>
+        </g>
+      </g>
+    </pattern>
+    <clipPath id="clippath">
+      <path class="cls-14" d="M-1446.7-112.2H1481.3v1229.8H-1446.7V-112.2Z"/>
+    </clipPath>
+  </defs>
+  <sodipodi:namedview id="base" bordercolor="#ffffff" borderopacity="0.0" inkscape:current-layer="layer1" inkscape:cx="348.9612" inkscape:cy="69.971821" inkscape:document-rotation="0" inkscape:document-units="px" inkscape:pageopacity="0.0" inkscape:pageshadow="0" inkscape:window-height="705" inkscape:window-maximized="1" inkscape:window-width="1366" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:zoom="0.35490398" pagecolor="#ffffff" showgrid="false"/>
+  <g id="layer1" inkscape:groupmode="layer" inkscape:label="Layer 1">
+    <image id="image1112" class="cls-12" width="1366" height="728" transform="translate(-624.1 415) rotate(-32.6) scale(1.9)" xlink:href="Spain-1.png"/>
+    <path id="path1124" class="cls-20" d="M336.5,37.2c-54.7-.1-109,.4-164.3,2.1-21.9.6-52.4,10.1-71.9,20-23.6,12-43.6,25.5-61.6,44.5-13.6,14.4-23.4,34.8-28.7,53.8-4.3,15.3-5.1,33.1-2.5,49.1,2.6,16.4,8.9,28.4,17.2,42.4,7.6,12.7,19,26.1,32.3,32.7,28.2,14.1,60.5,23.3,89.6,36.7,37.2,17.1,46.8,37.7,46.4,77.3-.3,24,5.3,49.5,51.5,50.7,231.1,5.7,460.1.3,691.4.8,130.8.3,239.6.9,367.9.8,34.3,0,59.9-21.7,72.2-36.1,11.2-13.1,19.5-35,20.3-52.8,1.3-26.2,2.2-51.2,3.2-75.5h0c.9-25.1,1.8-50.1,3-76.8.7-16.8-1.2-36-8.2-50.2-6.2-12.7-20.1-31.1-37.7-38.1-8.9-3.5-17.5-6.8-25.8-10h0c-39.6-15.5-74.7-26.2-117.4-41.7-10.2-3.7-22.1-6.8-32.3-4.8-12.2,2.4-26.5,10.4-34.3,19.6-8.6,10.3-15,24.7-17.3,38.6-1.7,10,2.4,23.3,7,31.5,10.7,19,29.1,26.6,48.1,32.3,20.7,6.3,31.4,11,46.8,24.1,13.1,11.2,33.2,37.1,37.4,59.5,7.2,35.2-3.3,56.9-23,61.5-8.9,2.1-17.9,3.3-31.1-3.7-137.9-80.1-262.8-157.2-401-241.9-18.3-11.2-38.7-21.1-59.8-23.9-13.1-1.7-29.5-1.2-41.2,1.9-14.1,3.7-31.1,13-40.7,24.8-46.6,57.2-70.6,100.3-112.3,161.9-9.3,13.8-14.7,31.5-12.7,47.1,5.2,39.6-11.3,67.9-37.9,69.4-43.8,2.5-72.7-1.1-113.3-2.3-26.9-.8-52.9-11.4-76.9-24.2-46.7-24.9-88.5-49.3-132-78-11.5-7.6-21.5-19.8-24.2-31.5-2.1-9,3-24.5,9.8-31.6,6.3-6.5,16.5-9.7,26.2-9.5,70,1.7,131.1.9,202.9-2.3,14.9-.7,36-11.9,47-21.6,12.5-11,22.6-21.6,29.5-36.8,5-11.1,8.9-25.3,7.2-37.1-1.6-11.3-9.5-27.2-16.4-34.8-8.2-9-20.4-16.7-33.4-16.8-33.4-.4-66.4-.7-99.3-.8h0Z" sodipodi:nodetypes="scssssccsssscssccsssccssssssscscssscsssssssscssssssss"/>
+    <path id="path4724" class="cls-17" d="M1215.8,432.4h-140.8" sodipodi:nodetypes="cc"/>
+    <path id="path4714" class="cls-22" d="M283.4,318.6c12.8,7.5,28,17.8,38.4,28.6,4.5,4.6,6.3,12.3,6.9,18.8,1.4,15.2,0,31-.9,46.4-.3,4.7-.8,9.8-3,13.8-3.5,6.2-8.2,13-14.1,16.7-6,3.8-23.5,4.4-30.7,4.2" sodipodi:nodetypes="cssssss"/>
+    <path id="path4716" class="cls-22" d="M439.9,448.9c-8.6,0-14.6-.7-21.7-2.1-11-2.2-18.8-4.3-26.3-10.5-5.8-4.8-10.7-12.7-13.2-20.2-2-6-2.1-13.6-.3-19.4,2.3-7.6,6.7-15.5,12.7-20.9,5.2-4.8,12.7-7.8,19.6-9.7,7.8-2.2,17.2-2.5,27.7-1.9" sodipodi:nodetypes="csssssss"/>
+    <path id="path4718" class="cls-22" d="M748.3,58.9c16.8.7,49.9,10.8,74.8,16,28.4,5.9,57.5,9.4,84.9,17.9,11.1,3.5,21.7,9.5,30.1,17.1,5.7,5.1,11,15.7,12.4,20.2,1.4,4.4,7.9,26.1,8.7,28.7.9,3.1,8,13.6,11.4,17,3.3,3.4,16.7,13.8,25.2,18.9" sodipodi:nodetypes="cssszszs"/>
+    <path id="path4712" class="cls-22" d="M1184.7,183.9c17.2,5.8,26,8.5,29.9,19.1,11.7,31.4,20.9,61.9,33.6,97.8,7.7,21.6-15.3,35.1-33.5,24.5" inkscape:connector-curvature="0" sodipodi:nodetypes="cssc"/>
+    <path id="path1125" class="cls-19" d="M1249.7,302.4l5.3,16.9"/>
+    <path id="path1122" class="cls-18" d="M1184.7,183.9c17.2,5.8,26,8.5,29.9,19.1,11.7,31.4,20.9,61.9,33.6,97.8,7.7,21.6-15.3,35.1-33.5,24.5" sodipodi:nodetypes="cssc"/>
+    <path id="path4476" class="cls-16" d="M283.4,318.6c12.8,7.5,28,17.8,38.4,28.6,4.5,4.6,6.3,12.3,6.9,18.8,1.4,15.2,0,31-.9,46.4-.3,4.7-.8,9.8-3,13.8-3.5,6.2-8.2,13-14.1,16.7-6,3.8-23.5,4.4-30.7,4.2" sodipodi:nodetypes="cssssss"/>
+    <path id="path4478" class="cls-16" d="M439.9,448.9c-8.6,0-14.6-.7-21.7-2.1-11-2.2-18.8-4.3-26.3-10.5-5.8-4.8-10.7-12.7-13.2-20.2-2-6-2.1-13.6-.3-19.4,2.3-7.6,6.7-15.5,12.7-20.9,5.2-4.8,12.7-7.8,19.6-9.7,7.8-2.2,17.2-2.5,27.7-1.9" sodipodi:nodetypes="csssssss"/>
+    <path id="path4480" class="cls-16" d="M748.3,58.9c16.8.7,49.9,10.8,74.8,16,28.4,5.9,57.5,9.4,84.9,17.9,11.1,3.5,21.7,9.5,30.1,17.1,5.7,5.1,11,15.7,12.4,20.2,1.4,4.4,7.9,26.1,8.7,28.7.9,3.1,8,13.6,11.4,17,3.3,3.4,16.7,13.8,25.2,18.9" sodipodi:nodetypes="cssszszs"/>
+    <path id="path4492" class="cls-22" d="M1330.3,108.2c8.5,3.2,17.2,6.5,26.2,10.1,17.6,7,31.4,25.4,37.7,38.1,7,14.2,8.9,33.5,8.2,50.2-1.1,27-2,52.2-3,77.5"/>
+    <path id="path985" class="cls-22" d="M1399.4,283.5c.1-9.6-12.4-18.4-22.6-18.7-15.7-.1-23.9-4.3-22.6-16.9,3.7-37.2,8.9-73.9,11.2-111.2,1.1-17.7-20.6-22.7-34.7-28.2" sodipodi:nodetypes="ccssc"/>
+    <path id="path987" class="cls-26" d="M1360.7,186.9s.4,5.4.6,7.8.7,5.1,2.5,7c1.7,2,2.6,2.8,6.2,3.6,3.6.9,14.7.3,18.6,1.1,3.9.8,4.4,1.3,6.9,3s3.6,2.9,4.8,5.9,1.1,11.4,1.1,11.4l.5,5.5" inkscape:connector-curvature="0" sodipodi:nodetypes="czzzzzzcc"/>
+    <path id="path4312" class="cls-25" d="M1360.7,186.9s.4,5.4.6,7.8.7,5.1,2.5,7c1.7,2,2.6,2.8,6.2,3.6,3.6.9,14.7.3,18.6,1.1,3.9.8,4.4,1.3,6.9,3s3.6,2.9,4.8,5.9,1.1,11.4,1.1,11.4l.5,5.5" inkscape:connector-curvature="0" sodipodi:nodetypes="czzzzzzcc"/>
+    <path id="path977" class="cls-18" d="M1399.4,283.5c.1-9.6-12.4-18.4-22.6-18.7-15.7-.1-23.9-4.3-22.6-16.9,3.7-37.2,8.9-73.9,11.2-111.2,1.1-17.7-20.6-22.7-34.7-28.2" sodipodi:nodetypes="ccssc"/>
+    <path id="path989" class="cls-23" d="M1397.1,289.5c-.6,20.8-4.9,40.4-9.1,60.3-2.4,11.1-6.4,18.5-11.3,28.6-4.5,9.2-11.8,17.4-19,24.7-5.4,5.5-11.3,10.5-17.8,14.7-6.6,4.3-14.2,8.5-21.7,10.6-10.5,3-22.2,3.2-33.3,3.6-27.8.9-56.4,1.9-83.6.1l-57.9-.7c-44.5.8-20.5.3-45.1.2-10.6,0-24.3.5-35,.5-122.2.2-244.7-1.8-366.8-.8-42,.4-97.7,4.9-139.7,6.8-26.6,1.2-26.4,2.4-53,3.9-18.9,1.1-50.7,5-69.6,4.8" inkscape:connector-curvature="0" sodipodi:nodetypes="cssssssccssssss"/>
+    <path id="path299" class="cls-15" d="M1249.3,304.5l5.3,16.9"/>
+    <path id="path3965" class="cls-24" d="M336.5,37.2c-54.7-.1-109,.4-164.3,2.1-21.9.6-52.4,10.1-71.9,20-23.6,12-43.6,25.5-61.6,44.5-13.6,14.4-23.4,34.8-28.7,53.8-4.3,15.3-5.1,33.1-2.5,49.1,2.6,16.4,8.9,28.4,17.2,42.4,7.6,12.7,19,26.1,32.3,32.7,28.2,14.1,60.5,23.3,89.6,36.7,37.2,17.1,46.8,37.7,46.4,77.3-.3,24,5.3,49.5,51.5,50.7,231.1,5.7,460.1.3,691.4.8,130.8.3,239.6.9,367.9.8,34.3,0,59.9-21.7,72.2-36.1,11.2-13.1,19.5-35,20.3-52.8,1.3-26.2,2.2-51.2,3.2-75.5h0c.9-25.1,1.8-50.1,3-76.8.7-16.8-1.2-36-8.2-50.2-6.2-12.7-20.1-31.1-37.7-38.1-8.9-3.5-17.5-6.8-25.8-10h0c-39.6-15.5-74.7-26.2-117.4-41.7-10.2-3.7-22.1-6.8-32.3-4.8-12.2,2.4-26.5,10.4-34.3,19.6-8.6,10.3-15,24.7-17.3,38.6-1.7,10,2.4,23.3,7,31.5,10.7,19,29.1,26.6,48.1,32.3,20.7,6.3,31.4,11,46.8,24.1,13.1,11.2,33.2,37.1,37.4,59.5,7.3,35.6-3.2,57.6-23.4,61.9-8.8,1.9-17.9,2.8-30.8-4.1-137.9-80.1-262.8-157.2-401-241.9-18.3-11.2-38.7-21.1-59.8-23.9-13.1-1.7-29.5-1.2-41.2,1.9-14.1,3.7-31.1,13-40.7,24.8-46.6,57.2-70.6,100.3-112.3,161.9-9.3,13.8-14.7,31.5-12.7,47.1,5.2,39.6-11.3,67.9-37.9,69.4-43.8,2.5-72.7-1.1-113.3-2.3-26.9-.8-52.9-11.4-76.9-24.2-46.7-24.9-88.5-49.3-132-78-11.5-7.6-21.5-19.8-24.2-31.5-2.1-9,3-24.5,9.8-31.6,6.3-6.5,16.5-9.7,26.2-9.5,70,1.7,131.1.9,202.9-2.3,14.9-.7,36-11.9,47-21.6,12.5-11,22.6-21.6,29.5-36.8,5-11.1,8.9-25.3,7.2-37.1-1.6-11.3-9.5-27.2-16.4-34.8-8.2-9-20.4-16.7-33.4-16.8-33.4-.4-66.4-.7-99.3-.8h0Z" sodipodi:nodetypes="scssssccsssscssccsssccssssssscscssscsssssssscssssssss"/>
+    <g id="text4528" class="cls-12">
+      <text class="cls-4" transform="translate(146.2 452.2)"><tspan x="0" y="0"> </tspan></text>
+    </g>
+    <g id="text4532" class="cls-12">
+      <text class="cls-2" transform="translate(151 472.8)"><tspan x="0" y="0"> </tspan></text>
+    </g>
+    <g id="g4693">
+      <path id="path4691" class="cls-29" d="M90.2,143.8c0,16.2-13.1,29.3-29.3,29.3h0c-16.2,0-29.3-13.1-29.3-29.3h0c0-16.2,13.1-29.3,29.3-29.3h0c16.2,0,29.3,13.1,29.3,29.3h0Z" sodipodi:cx="2274.6179" sodipodi:cy="1490.1846" sodipodi:rx="32.460609" sodipodi:ry="32.460609" sodipodi:type="arc"/>
+      <g id="text4544" class="cls-12">
+        <text class="cls-1" transform="translate(48.1 162.4)"><tspan x="0" y="0">3</tspan></text>
+      </g>
+    </g>
+    <g id="g4679">
+      <path id="path4665" class="cls-29" d="M408.2,316.4c0,16.2-13.1,29.3-29.3,29.3h0c-16.2,0-29.3-13.1-29.3-29.3h0c0-16.2,13.1-29.3,29.3-29.3h0c16.2,0,29.3,13.1,29.3,29.3h0Z" sodipodi:cx="2274.6179" sodipodi:cy="1490.1846" sodipodi:rx="32.460609" sodipodi:ry="32.460609" sodipodi:type="arc"/>
+      <g id="text4556" class="cls-12">
+        <text class="cls-1" transform="translate(364.8 335)"><tspan x="0" y="0">6</tspan></text>
+      </g>
+    </g>
+    <g id="g4707">
+      <circle id="path4705" class="cls-29" cx="163.3" cy="457" r="29.3"/>
+      <g id="text4536" class="cls-12">
+        <text class="cls-1" transform="translate(149.4 475.9)"><tspan x="0" y="0">1</tspan></text>
+      </g>
+    </g>
+    <g id="g4923">
+      <g id="use4772">
+        <g id="text4736" class="cls-12">
+          <text class="cls-9" transform="translate(344.2 92.7)"><tspan x="0" y="0">Repsol</tspan></text>
+          <text class="cls-11" transform="translate(344.2 92.7)"><tspan x="0" y="0">Repsol</tspan></text>
+        </g>
+      </g>
+      <g id="g4686">
+        <path id="path4684" class="cls-29" d="M469.3,84.9c0,16.2-13.1,29.3-29.3,29.3h0c-16.2,0-29.3-13.1-29.3-29.3h0c0-16.2,13.1-29.3,29.3-29.3h0c16.2,0,29.3,13.1,29.3,29.3h0Z" sodipodi:cx="2274.6179" sodipodi:cy="1490.1846" sodipodi:rx="32.460609" sodipodi:ry="32.460609" sodipodi:type="arc"/>
+        <g id="text4548" class="cls-12">
+          <text class="cls-1" transform="translate(426.5 103.8)"><tspan x="0" y="0">4</tspan></text>
+        </g>
+      </g>
+      <g id="text4736-2" data-name="text4736" class="cls-12">
+        <text class="cls-9" transform="translate(344.2 92.7)"><tspan x="0" y="0">Repsol</tspan></text>
+      </g>
+    </g>
+    <g id="g4651">
+      <circle id="path4649" class="cls-29" cx="734.5" cy="98.4" r="29.3"/>
+      <g id="text4568" class="cls-12">
+        <text class="cls-1" transform="translate(720.6 116.9)"><tspan x="0" y="0">9</tspan></text>
+      </g>
+    </g>
+    <g id="g4630">
+      <circle id="path4628" class="cls-29" cx="1107.4" cy="58" r="29.3"/>
+      <g id="text4580" class="cls-12">
+        <text class="cls-1" transform="translate(1077.3 76.9)"><tspan x="0" y="0">12</tspan></text>
+      </g>
+    </g>
+    <g id="use4784">
+      <g id="text4762" class="cls-12">
+        <text class="cls-9" transform="translate(1216.2 488.1)"><tspan x="0" y="0">Catalunya</tspan></text>
+        <text class="cls-11" transform="translate(1216.2 488.1)"><tspan x="0" y="0">Catalunya</tspan></text>
+      </g>
+    </g>
+    <g id="g4602">
+      <circle id="path4600" class="cls-29" cx="1349.8" cy="487.4" r="29.3"/>
+      <g id="text4596" class="cls-12">
+        <text class="cls-1" transform="translate(1319.6 506)"><tspan x="0" y="0">14</tspan></text>
+      </g>
+    </g>
+    <g id="text4762-2" data-name="text4762" class="cls-12">
+      <text class="cls-9" transform="translate(1216.6 487.8)"><tspan x="0" y="0">Catalunya</tspan></text>
+    </g>
+    <path id="path991" class="cls-21" d="M1397.1,289.5c-.6,20.8-4.9,40.4-9.1,60.3-2.4,11.1-6.4,18.5-11.3,28.6-4.5,9.2-11.8,17.4-19,24.7-5.4,5.5-11.3,10.5-17.8,14.7-6.6,4.3-14.2,8.5-21.7,10.6-10.5,3-22.2,3.2-33.3,3.6-27.8.9-56.4,1.9-83.6.1l-57.9-.7c-44.5.8-20.5.3-45.1.2-10.6,0-24.3.5-35,.5-122.2.2-244.7-1.8-366.8-.8-42,.4-97.7,4.9-139.7,6.8-26.6,1.2-26.4,2.4-53,3.9-18.9,1.1-50.7,5-69.6,4.8" inkscape:connector-curvature="0" sodipodi:nodetypes="cssssssccssssss"/>
+    <g id="g4425">
+      <path id="path3463" class="cls-3" d="M993.9,481.9v-17.1c0,0-44.8,8.4-44.8,8.4l44.8,8.7Z" inkscape:flatsided="true" inkscape:randomized="0" inkscape:rounded="0" sodipodi:arg1="0.52359878" sodipodi:arg2="1.5707963" sodipodi:cx="1683.6964" sodipodi:cy="1391.4535" sodipodi:r1="14.134234" sodipodi:r2="7.0671172" sodipodi:sides="3" sodipodi:type="star"/>
+      <polygon id="rect3457" class="cls-30" points="924.9 476.2 941.8 476.4 942.2 414.7 925.4 414.5 924.9 476.2"/>
+    </g>
+    <g class="cls-13">
+      <g id="g3804" inkscape:export-filename="D:\Losail.jpg.png" inkscape:export-xdpi="90.015755" inkscape:export-ydpi="90.015755">
+        <g id="text3180" class="cls-12">
+          <text class="cls-8" transform="translate(721 280.3)"><tspan x="0" y="0">N</tspan></text>
+          <text class="cls-10" transform="translate(721 280.3)"><tspan x="0" y="0">N</tspan></text>
+        </g>
+        <path id="path2745" class="cls-6" d="M872,219.4l-75.1,46.2,1.1,1.2,24.2-1-2.7,24,1.1,1.2,51.4-71.7Z"/>
+      </g>
+    </g>
+    <g id="g4700">
+      <circle id="path4698" class="cls-29" cx="104.9" cy="382.6" r="29.3"/>
+      <g id="text4540" class="cls-12">
+        <text class="cls-1" transform="translate(91.5 401.5)"><tspan x="0" y="0">2</tspan></text>
+      </g>
+    </g>
+    <path id="path4801" class="cls-3" d="M131.1,359.9l6.5,15.8,38.2-25-44.7,9.2Z" inkscape:flatsided="true" inkscape:randomized="0" inkscape:rounded="0" sodipodi:arg1="0.52359878" sodipodi:arg2="1.5707963" sodipodi:cx="1683.6964" sodipodi:cy="1391.4535" sodipodi:r1="14.134234" sodipodi:r2="7.0671172" sodipodi:sides="3" sodipodi:type="star"/>
+    <g id="g4674">
+      <circle id="path4672" class="cls-29" cx="245.7" cy="241.4" r="29.3"/>
+      <g id="text4552" class="cls-12">
+        <text class="cls-1" transform="translate(232.2 259.7)"><tspan x="0" y="0">5</tspan></text>
+      </g>
+    </g>
+    <path id="path4803" class="cls-3" d="M212.3,233.7l6.7-15.7-44.6-9.7,37.9,25.5Z" inkscape:flatsided="true" inkscape:randomized="0" inkscape:rounded="0" sodipodi:arg1="0.52359878" sodipodi:arg2="1.5707963" sodipodi:cx="1683.6964" sodipodi:cy="1391.4535" sodipodi:r1="14.134234" sodipodi:r2="7.0671172" sodipodi:sides="3" sodipodi:type="star"/>
+    <g id="g4906">
+      <g id="g4667">
+        <path id="path4663" class="cls-29" d="M511.9,286.4c0,16.2-13.1,29.3-29.3,29.3h0c-16.2,0-29.3-13.1-29.3-29.3h0c0-16.2,13.1-29.3,29.3-29.3h0c16.2,0,29.3,13.1,29.3,29.3h0Z" sodipodi:cx="2274.6179" sodipodi:cy="1490.1846" sodipodi:rx="32.460609" sodipodi:ry="32.460609" sodipodi:type="arc"/>
+        <g id="text4560" class="cls-12">
+          <text class="cls-1" transform="translate(468.8 304.5)"><tspan x="0" y="0">7</tspan></text>
+        </g>
+      </g>
+      <path id="path4805" class="cls-3" d="M511.2,304.5l-12.6,11.5,36.5,27.4-23.9-38.9Z" inkscape:flatsided="true" inkscape:randomized="0" inkscape:rounded="0" sodipodi:arg1="0.52359878" sodipodi:arg2="1.5707963" sodipodi:cx="1683.6964" sodipodi:cy="1391.4535" sodipodi:r1="14.134234" sodipodi:r2="7.0671172" sodipodi:sides="3" sodipodi:type="star"/>
+    </g>
+    <g id="g4899">
+      <g id="g4658">
+        <path id="path4656" class="cls-29" d="M665.5,283.2c0,16.2-13.1,29.3-29.3,29.3h0c-16.2,0-29.3-13.1-29.3-29.3h0c0-16.2,13.1-29.3,29.3-29.3h0c16.2,0,29.3,13.1,29.3,29.3h0Z" sodipodi:cx="2274.6179" sodipodi:cy="1490.1846" sodipodi:rx="32.460609" sodipodi:ry="32.460609" sodipodi:type="arc"/>
+        <g id="text4564" class="cls-12">
+          <text class="cls-1" transform="translate(622.2 301.8)"><tspan x="0" y="0">8</tspan></text>
+        </g>
+      </g>
+      <path id="path4807" class="cls-3" d="M603.1,287.7v-17.1c0,0-44.8,8.4-44.8,8.4l44.8,8.7Z" inkscape:flatsided="true" inkscape:randomized="0" inkscape:rounded="0" sodipodi:arg1="0.52359878" sodipodi:arg2="1.5707963" sodipodi:cx="1683.6964" sodipodi:cy="1391.4535" sodipodi:r1="14.134234" sodipodi:r2="7.0671172" sodipodi:sides="3" sodipodi:type="star"/>
+    </g>
+    <g id="g4839">
+      <g id="use4782">
+        <g id="text4758" class="cls-12">
+          <text class="cls-9" transform="translate(1244.7 36.6)"><tspan x="0" y="0">Europcar</tspan></text>
+          <text class="cls-11" transform="translate(1244.7 36.6)"><tspan x="0" y="0">Europcar</tspan></text>
+        </g>
+      </g>
+      <g id="g4623">
+        <path id="path4621" class="cls-29" d="M1393.1,30.3c0,16.2-13.1,29.3-29.3,29.3h0c-16.2,0-29.3-13.1-29.3-29.3h0c0-16.2,13.1-29.3,29.3-29.3h0c16.2,0,29.3,13.1,29.3,29.3h0Z" sodipodi:cx="2274.6179" sodipodi:cy="1490.1846" sodipodi:rx="32.460609" sodipodi:ry="32.460609" sodipodi:type="arc"/>
+        <g id="text4584" class="cls-12">
+          <text class="cls-1" transform="translate(1334.9 48.9)"><tspan x="0" y="0">13</tspan></text>
+        </g>
+      </g>
+      <g id="text4758-2" data-name="text4758" class="cls-12">
+        <text class="cls-9" transform="translate(1244.7 36.6)"><tspan x="0" y="0">Europcar</tspan></text>
+      </g>
+      <path id="path4809" class="cls-3" d="M1373,63.9h-17.1c0,0,8.4,44.8,8.4,44.8l8.7-44.8Z" inkscape:flatsided="true" inkscape:randomized="0" inkscape:rounded="0" sodipodi:arg1="0.52359878" sodipodi:arg2="1.5707963" sodipodi:cx="1683.6964" sodipodi:cy="1391.4535" sodipodi:r1="14.134234" sodipodi:r2="7.0671172" sodipodi:sides="3" sodipodi:type="star"/>
+    </g>
+    <g id="use4778">
+      <g id="text4748" class="cls-12">
+        <text class="cls-9" transform="translate(1168.4 367.1)"><tspan x="0" y="0">La Caixa</tspan></text>
+        <text class="cls-11" transform="translate(1168.4 367.1)"><tspan x="0" y="0">La Caixa</tspan></text>
+      </g>
+    </g>
+    <g id="g4644">
+      <circle id="path4642" class="cls-28" cx="1287.2" cy="358" r="29.3"/>
+      <g id="text4572" class="cls-12">
+        <text class="cls-1" transform="translate(1257 376.6)"><tspan x="0" y="0">10</tspan></text>
+      </g>
+    </g>
+    <g id="text4748-2" data-name="text4748" class="cls-12">
+      <text class="cls-9" transform="translate(1168.4 367.1)"><tspan x="0" y="0">La Caixa</tspan></text>
+    </g>
+    <g id="g4863">
+      <g id="g4637">
+        <circle id="path4635" class="cls-28" cx="1246" cy="165.3" r="29.3"/>
+        <g id="text4576" class="cls-12">
+          <text class="cls-1" transform="translate(1218.2 184.3)"><tspan x="0" y="0">11</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g id="text5214" class="cls-12">
+      <text class="cls-9" transform="translate(378.4 498.8)"><tspan x="0" y="0"> </tspan></text>
+    </g>
+    <g id="text4316" class="cls-12">
+      <text class="cls-7" transform="translate(1281.2 290.9)"><tspan x="0" y="0"> </tspan></text>
+    </g>
+    <g id="text4320" class="cls-12">
+      <text class="cls-7" transform="translate(509.4 -100.7)"><tspan x="0" y="0"> </tspan></text>
+    </g>
+    <g id="text999" class="cls-12">
+      <text class="cls-9" transform="translate(555.1 356.8)"><tspan x="0" y="0">TV3</tspan></text>
+      <text class="cls-11" transform="translate(555.1 356.8)"><tspan x="0" y="0">TV3</tspan></text>
+    </g>
+    <g id="text4330" class="cls-12">
+      <text class="cls-9" transform="translate(555.1 356.8)"><tspan x="0" y="0">TV3</tspan></text>
+    </g>
+  </g>
+</svg>

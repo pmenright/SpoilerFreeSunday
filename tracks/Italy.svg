@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg2383" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" version="1.1" viewBox="0 0 1466.7 749.3">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        isolation: isolate;
+      }
+
+      .cls-1, .cls-2, .cls-10, .cls-4, .cls-11, .cls-6, .cls-12, .cls-13, .cls-9, .cls-14 {
+        fill: #000;
+      }
+
+      .cls-1, .cls-3, .cls-5 {
+        font-family: Arial-BoldMT, Arial;
+        font-size: 40px;
+        font-weight: 700;
+      }
+
+      .cls-15 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-16, .cls-17, .cls-18, .cls-5, .cls-19, .cls-20, .cls-7, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26 {
+        fill: none;
+      }
+
+      .cls-16, .cls-27, .cls-10, .cls-28 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        font-size: 32px;
+      }
+
+      .cls-2, .cls-4 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-17 {
+        stroke: #ff5e93;
+      }
+
+      .cls-17, .cls-18, .cls-29, .cls-11, .cls-19, .cls-20, .cls-13, .cls-22, .cls-23 {
+        stroke-linecap: round;
+      }
+
+      .cls-17, .cls-18, .cls-29, .cls-11, .cls-22, .cls-23, .cls-24, .cls-26 {
+        stroke-linejoin: round;
+      }
+
+      .cls-17, .cls-18, .cls-21, .cls-23 {
+        stroke-width: 4px;
+      }
+
+      .cls-17, .cls-18, .cls-23 {
+        stroke-dasharray: 0 0 4 12;
+      }
+
+      .cls-18 {
+        stroke: #d7ff01;
+      }
+
+      .cls-3 {
+        fill: #030000;
+      }
+
+      .cls-27 {
+        fill: url(#pattern2580);
+      }
+
+      .cls-30 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-29 {
+        fill: url(#pattern4264);
+        stroke-width: 1px;
+      }
+
+      .cls-29, .cls-21, .cls-24, .cls-26 {
+        stroke: #000;
+      }
+
+      .cls-4 {
+        font-size: 28px;
+      }
+
+      .cls-11, .cls-5, .cls-12, .cls-13, .cls-7 {
+        stroke: #fff;
+      }
+
+      .cls-11, .cls-7 {
+        stroke-width: 1px;
+      }
+
+      .cls-5 {
+        stroke-width: 5px;
+      }
+
+      .cls-19, .cls-20, .cls-25 {
+        stroke: #8c8c8c;
+      }
+
+      .cls-19, .cls-25 {
+        stroke-width: 7.1px;
+      }
+
+      .cls-6 {
+        font-size: 20px;
+      }
+
+      .cls-6, .cls-7, .cls-9 {
+        font-family: TimesNewRomanPSMT, 'Times New Roman';
+      }
+
+      .cls-12 {
+        fill-rule: evenodd;
+        stroke-width: 1.5px;
+      }
+
+      .cls-20 {
+        stroke-width: 7px;
+      }
+
+      .cls-13 {
+        stroke-width: .9px;
+      }
+
+      .cls-7, .cls-9 {
+        font-size: 100px;
+      }
+
+      .cls-22 {
+        stroke: #c8c8c8;
+      }
+
+      .cls-22, .cls-26 {
+        stroke-width: 13px;
+      }
+
+      .cls-23 {
+        stroke: #21cee0;
+      }
+
+      .cls-24 {
+        stroke-width: 5.1px;
+      }
+
+      .cls-28 {
+        fill: #fff;
+      }
+
+      .cls-14 {
+        stroke: red;
+      }
+    </style>
+    <pattern id="pattern2580" x="0" y="0" width="1466.7" height="749.3" patternTransform="translate(330.8 -16285) rotate(-3.3) scale(1 -1)" patternUnits="userSpaceOnUse" viewBox="0 0 1466.7 749.3">
+      <rect class="cls-16" width="1466.7" height="749.3"/>
+    </pattern>
+    <clipPath id="clippath">
+      <rect class="cls-16" x="51.1" y="202" width="1948.1" height="1293.4" transform="translate(-295.3 1014.6) rotate(-46.8)"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-16" x="320.7" y="211" width="1948.1" height="1293.4" transform="translate(-216.9 1213.9) rotate(-46.8)"/>
+    </clipPath>
+    <pattern id="pattern4264" x="0" y="0" width="10.8" height="10.8" patternTransform="translate(-13393.9 1554) rotate(177.2) scale(1 -1)" patternUnits="userSpaceOnUse" viewBox="0 0 10.8 10.8">
+      <g>
+        <rect class="cls-16" width="10.8" height="10.8"/>
+        <g id="g4248">
+          <polygon id="rect4250" class="cls-10" points=".1 10.8 10.8 10.7 10.7 0 0 .1 .1 10.8"/>
+          <polygon id="rect4252" class="cls-28" points=".1 10.8 5.4 10.7 5.4 5.4 0 5.4 .1 10.8"/>
+          <polygon id="rect4254" class="cls-28" points="5.4 5.4 10.7 5.3 10.7 0 5.4 0 5.4 5.4"/>
+        </g>
+      </g>
+    </pattern>
+  </defs>
+  <g id="_defs" data-name="&amp;lt;defs">
+    <inkscape:perspective id="perspective2391" inkscape:persp3d-origin="372.04724 : 350.78739 : 1" inkscape:vp_x="0 : 526.18109 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_z="744.09448 : 526.18109 : 1" sodipodi:type="inkscape:persp3d"/>
+    <inkscape:perspective id="perspective2400" inkscape:persp3d-origin="372.04724 : 350.78739 : 1" inkscape:vp_x="0 : 526.18109 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_z="744.09448 : 526.18109 : 1" sodipodi:type="inkscape:persp3d"/>
+    <inkscape:perspective id="perspective3665" inkscape:persp3d-origin="372.04724 : 350.78739 : 1" inkscape:vp_x="0 : 526.18109 : 1" inkscape:vp_y="0 : 1000 : 0" inkscape:vp_z="744.09448 : 526.18109 : 1" sodipodi:type="inkscape:persp3d"/>
+  </g>
+  <sodipodi:namedview id="base" bordercolor="#ffffff" borderopacity="0.0" fit-margin-bottom="0" fit-margin-left="0" fit-margin-right="0" fit-margin-top="0" inkscape:current-layer="layer2" inkscape:cx="766.43924" inkscape:cy="317.14343" inkscape:document-units="px" inkscape:guide-bbox="true" inkscape:pageopacity="0.0" inkscape:pageshadow="0" inkscape:showpageshadow="true" inkscape:window-height="838" inkscape:window-maximized="1" inkscape:window-width="1600" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:zoom="0.5402926" pagecolor="#ffffff" showborder="true" showgrid="false" showguides="true"/>
+  <g id="layer2" inkscape:groupmode="layer" inkscape:label="fff" sodipodi:insensitive="true">
+    <path id="path3856" class="cls-20" d="M798.8,663s-16-6.3-30.8-7.9c-8.2-.9-21.6-1.7-29.1-8.1s-6.7-15.2-5.4-20.6c1.4-5.9,5.8-9.7,10.2-12.9,5.7-4.1,14.1-5.8,18.8-12.1,7.3-9.9,7-11.8,11.3-23.4,3.4-9.3,2.9-22.8,2.9-32.9,0-8.5-1.6-19.6,3.9-26.1,1.8-2.1,5.6-2.7,7.4-3.5s9.2-1.6,9.8-1.6l67.4-9.9" inkscape:connector-curvature="0" sodipodi:nodetypes="cszsssssszcc"/>
+    <path id="path3858" class="cls-19" d="M525.1,663.1l-16.7-16.5" inkscape:connector-curvature="0" sodipodi:nodetypes="cc"/>
+    <path id="path3860" class="cls-25" d="M535.4,667.9l-100.8,3.5" inkscape:connector-curvature="0" sodipodi:nodetypes="cc"/>
+  </g>
+  <g id="layer3" inkscape:groupmode="layer" inkscape:label="lay" sodipodi:insensitive="true">
+    <path id="path3854" class="cls-19" d="M745.9,503.3l-505.4,7.4s-15.1,1.8-19.9,4.7c-4.8,2.9-7.2,4.5-9.4,7.4-2.1,2.9-4.7,7.5-5.5,10.5-.8,3-1,9.2-1,9.2,0,0,.4,4.6,1.4,7.6s3.1,6.1,5.1,9c2,2.9,6.6,8.2,6.6,8.2,0,0,70.3,65.6,90.2,79.3,20,13.7,33.3,23.9,33.3,23.9" inkscape:connector-curvature="0" sodipodi:nodetypes="cczzzczzczc"/>
+  </g>
+  <g id="layer10" inkscape:groupmode="layer" inkscape:label="Oval" sodipodi:insensitive="true">
+    <path id="path3111" class="cls-22" d="M1277.1,656.5c-104.8,3.6-511.7,5.2-616.6,3.8-123.1-1.7-234.6-71.8-234.8-188.6-.2-109.8,89.7-196.9,194.6-196.9s552,8.2,656.9,8.2,181.5,86.3,182.9,191.2c1.7,119-85.6,179-183.1,182.3h0Z" inkscape:connector-curvature="0" sodipodi:nodetypes="sssssss"/>
+  </g>
+  <g id="g3109" inkscape:groupmode="layer" inkscape:label="Circuit copy" sodipodi:insensitive="true">
+    <path id="path3113" class="cls-26" d="M896.1,661.7c-120,3.5-239.5,4.4-358.8,5.9-24.7.3.5-34.1-26-23.5-36.4,14.6-71.5,27.2-111.1,27.5-37.1.3-89.6.8-113.9-7.3-26.3-8.7-53.2-29.2-63.1-37.2-18-14.6-35.3-37.1-48.1-68.2-14.8-35.9-26.8-95.4-35.6-148.2-4.8-28.7-17.4-96.8-20.7-122.5-3-23.8-23.5-8.9-29.4-25.5-24.9-68.8-56.8-121.2-59.2-130.7-12.2-24.9-15.5-40.9-11-58.6,2.5-9.7,21.2-25.9,31.8-27.9,48.3-9.3,91.7-18.8,141.6-26.9,7.2-1.2,15.5,6.8,19.6,12.1,24.4,31.9,92,136.1,132.3,181.5,39.7,44.8,82,79.5,131.4,125.1,47.7,44.1,97.9,91.3,145.4,132.4,12.4,10.8,34.4-3.2,57.3-1.4,5.2.4,21.3,4.7,31.4,13.8,5.1,4.6,10.7,12.8,19.2,15.9s35.8,3.9,39.5,3.8c180.1-1.1,342.9-.9,523.5.2,36.7,0,53,16.9,55.1,50.1-.3,12-1.5,25.1-11.1,37.8-12.8,16.7-34.7,34.7-53.5,42.6-34.3,14.4-69.5,15.4-104.5,19.4-90.3,10.4-189.4,6.8-282,9.4h0Z" inkscape:connector-curvature="0" sodipodi:nodetypes="sssssssssscsssssssssssccssss"/>
+    <path id="path3115" class="cls-24" d="M1193.1,648.1c-19.8-1-104-2.9-131.4-2.4-46.5.7-58,1.6-111.3,2.1-74.8.7-165.7,11.3-194.5,12.9" inkscape:connector-curvature="0" sodipodi:nodetypes="csss"/>
+    <polygon id="rect3129" class="cls-27" points="608.9 733.6 608.9 733.6 608.9 733.6 608.9 733.6"/>
+  </g>
+  <g id="layer11" inkscape:groupmode="layer" inkscape:label="sectors">
+    <path id="path5276" class="cls-18" d="M133.3,374.6c2.3,13,5,27.9,6.3,36.3,8.8,52.8,20.8,112.3,35.6,148.2,12.8,31.1,30.1,53.6,48.1,68.2,9.9,8,36.8,28.5,63.1,37.2,24.2,8,76.8,7.6,113.9,7.3,39.5-.3,74.6-13,111.1-27.6,26.5-10.6,1.3,23.8,26,23.5,119.3-1.6,274.6-3.3,358.8-5.9,42.3-1.3,167.1-3.3,184.6-3.3" inkscape:connector-curvature="0" sodipodi:nodetypes="csssssscsc"/>
+    <path id="path5273" class="cls-23" d="M1072.8,658.4c92.3-2.6,16.7-.4,105.3-6.2,35.2-2.3,70.2-5.1,104.5-19.4,18.9-7.9,40.8-25.9,53.6-42.6,9.6-12.6,10.8-25.8,11.1-37.8-2.1-33.2-18.4-50.2-55.1-50.1-180.6-1.2-343.4-1.3-523.5-.2-3.7,0-31-.8-39.5-3.8s-14.1-11.3-19.2-15.8c-10.1-9.1-26.2-13.4-31.4-13.8-22.9-1.8-44.8,12.1-57.3,1.4-18.6-16.1-37.7-33.3-56.8-50.7" inkscape:connector-curvature="0" sodipodi:nodetypes="csssccsssssc"/>
+    <path id="path3929" class="cls-17" d="M563.6,418.3c-29.3-26.8-58.9-54.3-87.6-80.8-49.3-45.6-91.6-80.3-131.3-125.1-40.3-45.4-107.9-149.6-132.3-181.5-4.1-5.3-12.4-13.3-19.6-12.2-49.9,8.1-93.3,17.6-141.6,26.9-10.6,2-29.3,18.2-31.8,27.9-4.6,17.7-1.2,33.7,11,58.6,2.4,9.4,34.3,61.9,59.2,130.7,6,16.6,26.4,1.6,29.4,25.5,2.3,18.3,8.8,54.6,14.4,86.2" inkscape:connector-curvature="0" sodipodi:nodetypes="csssssscssc"/>
+  </g>
+  <g id="layer8" inkscape:groupmode="layer" inkscape:label="Start-Finish">
+    <g class="cls-15">
+      <path id="path3125" class="cls-13" d="M792.6,678.3l.7,16.2-42.9-6.3,42.2-9.9Z" inkscape:flatsided="true" inkscape:randomized="0" inkscape:rounded="0" sodipodi:arg1="0.52359878" sodipodi:arg2="1.5707963" sodipodi:cx="1683.6964" sodipodi:cy="1391.4535" sodipodi:r1="14.134234" sodipodi:r2="7.0671172" sodipodi:sides="3" sodipodi:type="star"/>
+    </g>
+    <g class="cls-30">
+      <polygon id="rect3127" class="cls-29" points="1070.1 623.4 1086.9 622.7 1090.1 691.6 1073.3 692.4 1070.1 623.4"/>
+    </g>
+    <path id="path3131" class="cls-14" d="M423.8,269.5l12.5-12.5,20.3,32-32.8-19.5Z" inkscape:connector-curvature="0" sodipodi:nodetypes="cccc"/>
+    <path id="path3097" class="cls-21" d="M897.2,629.9l3,60.8" inkscape:connector-curvature="0"/>
+    <g id="text3870" class="cls-8" sodipodi:linespacing="125%">
+      <text class="cls-4" transform="translate(872.9 715.2)"><tspan x="0" y="0">start</tspan></text>
+    </g>
+    <g id="text3870-1" class="cls-8" sodipodi:linespacing="125%">
+      <text class="cls-4" transform="translate(1050.8 715.2)"><tspan x="0" y="0">finish</tspan></text>
+    </g>
+  </g>
+  <g id="layer6" inkscape:groupmode="layer" inkscape:label="Turn names">
+    <g id="text2482" class="cls-8" sodipodi:linespacing="100%">
+      <text class="cls-2" transform="translate(345.3 167.6)"><tspan x="0" y="0">Curva del</tspan></text>
+      <text class="cls-2" transform="translate(345.3 199.6)"><tspan x="0" y="0">Serraglio</tspan></text>
+    </g>
+    <g id="text2488" class="cls-8" sodipodi:linespacing="100%">
+      <text class="cls-2" transform="translate(149.1 250.2)"><tspan x="0" y="0">2º Variante</tspan></text>
+      <text class="cls-4" transform="translate(149.1 279.5)"><tspan x="0" y="0">(Variante </tspan></text>
+      <text class="cls-4" transform="translate(149.1 307.5)"><tspan x="0" y="0">della Roggia)</tspan></text>
+    </g>
+    <g id="text2500" class="cls-8">
+      <text class="cls-2" transform="translate(595.3 407.8)"><tspan x="0" y="0">Variante Ascari</tspan></text>
+    </g>
+    <g id="text2504" class="cls-8" sodipodi:linespacing="100%">
+      <text class="cls-2" transform="translate(1235.1 551.3)"><tspan x="0" y="0">Curva</tspan></text>
+      <text class="cls-2" transform="translate(1169.2 583.3)"><tspan x="0" y="0">Parabolica</tspan></text>
+    </g>
+    <g id="text2518" class="cls-8" sodipodi:linespacing="100%">
+      <text class="cls-2" transform="translate(102.6 696.2) rotate(.7)"><tspan x="0" y="0">Curva Biassono</tspan></text>
+      <text class="cls-4" transform="translate(118 725.7) rotate(.7)"><tspan x="0" y="0">(Curva Grande)</tspan></text>
+    </g>
+    <g id="text2554" class="cls-8" sodipodi:linespacing="100%">
+      <text class="cls-2" transform="translate(436.8 714)"><tspan x="0" y="0">1º Variante</tspan></text>
+      <text class="cls-4" transform="translate(380.8 743.4)"><tspan x="0" y="0">(Variante del Rettifilo)</tspan></text>
+    </g>
+    <g id="text2478" class="cls-8" sodipodi:linespacing="100%">
+      <text class="cls-2" transform="translate(84.4 103.3)"><tspan x="0" y="0">Curve di </tspan></text>
+      <text class="cls-2" transform="translate(84.4 135.3)"><tspan x="0" y="0">Lesmo</tspan></text>
+    </g>
+  </g>
+  <g id="layer7" inkscape:groupmode="layer" inkscape:label="Turn numbers" sodipodi:insensitive="true">
+    <g id="text7054" class="cls-8" sodipodi:linespacing="125%">
+      <text class="cls-3" transform="translate(529.1 652.7)"><tspan x="0" y="0">1</tspan></text>
+      <text class="cls-5" transform="translate(529.1 652.7)"><tspan x="0" y="0">1</tspan></text>
+    </g>
+    <g id="text5781" class="cls-8" sodipodi:linespacing="125%">
+      <text class="cls-1" transform="translate(529.1 652.7)"><tspan x="0" y="0">1</tspan></text>
+    </g>
+    <g id="text7058" class="cls-8" sodipodi:linespacing="125%">
+      <text class="cls-3" transform="translate(487.6 629.9)"><tspan x="0" y="0">2</tspan></text>
+      <text class="cls-5" transform="translate(487.6 629.9)"><tspan x="0" y="0">2</tspan></text>
+    </g>
+    <g id="text5781-3" class="cls-8" sodipodi:linespacing="125%">
+      <text class="cls-1" transform="translate(487.6 629.9)"><tspan x="0" y="0">2</tspan></text>
+    </g>
+    <g id="text5781-3-6" class="cls-8" sodipodi:linespacing="125%">
+      <text class="cls-1" transform="translate(191.9 660.9)"><tspan x="0" y="0">3</tspan></text>
+    </g>
+    <g id="text5781-3-6-8" class="cls-8" sodipodi:linespacing="125%">
+      <text class="cls-1" transform="translate(86.6 315.9)"><tspan x="0" y="0">4</tspan></text>
+    </g>
+    <g id="text5781-3-6-7" class="cls-8" sodipodi:linespacing="125%">
+      <text class="cls-1" transform="translate(96.9 253.5)"><tspan x="0" y="0">5</tspan></text>
+    </g>
+    <g id="text5781-3-6-1" class="cls-8" sodipodi:linespacing="125%">
+      <text class="cls-1" transform="translate(35.6 93.8)"><tspan x="0" y="0">6</tspan></text>
+    </g>
+    <g id="text5781-3-6-0" class="cls-8" sodipodi:linespacing="125%">
+      <text class="cls-1" transform="translate(177.9 61.7)"><tspan x="0" y="0">7</tspan></text>
+    </g>
+    <g id="text5781-3-6-9" class="cls-8" sodipodi:linespacing="125%">
+      <text class="cls-1" transform="translate(621.4 455.8)"><tspan x="0" y="0">8</tspan></text>
+    </g>
+    <g id="text5781-3-6-03" class="cls-8" sodipodi:linespacing="125%">
+      <text class="cls-1" transform="translate(678.7 459.9)"><tspan x="0" y="0">9</tspan></text>
+    </g>
+    <g id="text5781-3-6-2" class="cls-8" sodipodi:linespacing="125%">
+      <text class="cls-1" transform="translate(721.1 481.3)"><tspan x="0" y="0">10</tspan></text>
+    </g>
+    <g id="text5781-3-6-88" class="cls-8" sodipodi:linespacing="125%">
+      <text class="cls-1" transform="translate(1358.1 576.5)"><tspan x="0" y="0">11</tspan></text>
+    </g>
+  </g>
+  <g id="layer5" inkscape:groupmode="layer" inkscape:label="Compass &amp; Scale" sodipodi:insensitive="true">
+    <path id="path2423" class="cls-12" d="M580,69.2v21h360v-21h-4v17h-85.3v-7.6h-4v7.6h-84.9v-13.1h-4v13.1h-85.1v-7.6h-4v7.6h-84.7v-17h-4Z" inkscape:connector-curvature="0"/>
+    <g id="text2441" class="cls-8">
+      <text class="cls-6" transform="translate(697.1 61.3)"><tspan x="0" y="0">2032 ft (619 m)</tspan></text>
+    </g>
+    <g id="text3180" class="cls-8" inkscape:export-xdpi="90.015755" inkscape:export-ydpi="90.015755">
+      <text class="cls-9" transform="translate(1090.4 132.6)"><tspan x="0" y="0">N</tspan></text>
+      <text class="cls-7" transform="translate(1090.4 132.6)"><tspan x="0" y="0">N</tspan></text>
+    </g>
+    <path id="path2745" class="cls-11" d="M1188.5,112.7l101.6-33.8.2,2-19.8,21.7,24.5,16.3.2,2-106.8-8.2h0Z" inkscape:connector-curvature="0" inkscape:export-filename="D:\Images\Race Tracks\text3180.png" inkscape:export-xdpi="90.015755" inkscape:export-ydpi="90.015755" inkscape:transform-center-x="6.157295" inkscape:transform-center-y="-5.1609631"/>
+  </g>
+</svg>

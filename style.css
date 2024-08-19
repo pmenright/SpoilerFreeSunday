@@ -1,18 +1,27 @@
+@font-face {
+    font-family: 'Bahnschrift';
+    src: url('bahnschrift.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    padding: 125px;
+    padding: 50px 125px 125px 125px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: 'Bahnschrift', sans-serif;
 }
+
 img {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
 #img-center {
     text-align: center;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -21,6 +30,7 @@ table {
     z-index: 1; /* Ensure table is on top */
     position: relative;
 }
+
 .wrapper {
     overflow-x: auto;
     border-radius: 0 15px 15px 15px;
@@ -28,91 +38,227 @@ table {
     position: relative;
     z-index: 1; /* Ensures the table wrapper is above the tab container */
 }
+
 th, td {
     padding: 15px;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: 'Bahnschrift', sans-serif;
     font-weight: 400;
     text-align: left;
 }
+
 th {
     background-color: #dadada;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: 'Bahnschrift', sans-serif;
     font-weight: 700;
     color: rgb(45, 45, 45);
 }
+
 td {
     color: rgb(95, 95, 95);
 }
+
 tbody tr:nth-child(odd) {
     background-color: #f0f0f0; /* Slightly darker shade for odd rows */
 }
+
 h1 {
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: 'Bahnschrift', sans-serif;
     font-weight: 700;
-    font-style: italic;
+    font-size: 4em;
+    text-shadow: -2px 2px #dadada;
 }
-h3 {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 500;
+
+h2 {
+    font-family: 'Bahnschrift', sans-serif;
+    font-weight: 100;
     text-align: left;
+    color: rgb(45, 45, 45);
 }
-h3:nth-of-type(2) {
-    text-align: right;
-    font-style: italic;
-}
+
 #text-wrapper {
     width: 80%;
     display: inline-block;
 }
+
+/* Align thisWeekTag to the left side of its parent div */
+.thisWeek {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.thisWeekTag {
+    height: 45px;
+    margin: 0;
+    padding: 0;
+    flex-shrink: initial;
+}
+
+/* Race container layout */
+.raceContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Make raceInfo take up 67% and trackMap take up 33% of the width on larger screens */
+.raceInfo {
+    width: 67%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.trackMap {
+    width: 33%;
+}
+
+/* Ensure trackMap image takes up the full width */
+.trackMap img {
+    width: 100%;
+    height: auto;
+}
+
+/* Styling for all info divs */
+.infoDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.infoDiv h1, .infoDiv h2 {
+    margin: 0;
+}
+
+.infoDiv h1:first-child, .infoDiv h2:first-child {
+    text-align: left;
+}
+
+.infoDiv h1:last-child, .infoDiv h2:last-child {
+    text-align: right;
+}
+
+.underlineDiv {
+    border-bottom: 2px solid #a0a0a0;
+}
+
+/* Cyan and Magenta color for text */
+#cyanText {
+    color: #00bcd4; /* Cyan color */
+}
+
+#magentaText {
+    color: #ff4081;
+    margin-bottom: 10px;
+}
+
+.rightAlignText {
+    display: flex;
+    justify-content: flex-end; /* Aligns all flex items to the right */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .raceContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trackMap {
+        width: 100%; /* Full width on smaller screens */
+        margin-top: 20px;
+    }
+
+    .raceInfo {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .trackMap {
+        width: 50%; /* Half width on phone screens */
+        margin-top: 20px;
+    }
+
+    .raceInfo {
+        width: 100%;
+    }
+
+    #cyanText {
+        font-size: 1.8rem;
+    }
+
+    #magentaText {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+/* Tab container */
 .tabContainer {
     margin-top: 20px;
     display: flex;
     align-items: flex-start;
     position: relative;
-    z-index: 0; /* Ensure the tab container is below the table wrapper */
-    flex-wrap: nowrap; /* Prevent wrapping of tabs */
-    justify-content: flex-start; /* Left align tabs */
+    z-index: 0;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
 }
+
 .buttonTab {
     padding: 10px 20px;
     cursor: pointer;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: 'Bahnschrift', sans-serif;
     font-weight: 500;
     font-size: 1em;
     background-color: #a0a0a0;
-    color: inherit; /* Ensures the text color is inherited correctly */
+    color: inherit;
     border: none;
     position: relative;
-    z-index: 2; /* Ensure button tabs are above the tab container */
+    z-index: 2;
     display: inline-block;
     text-align: center;
-    margin-right: 1px; /* Small margin to separate tabs */
+    margin-right: 1px;
 }
+
 .buttonTab:hover {
-    background-color: #b5b5b5; /* Hover color */
+    background-color: #b5b5b5;
 }
+
 .buttonTab.active {
-    background-color: #dadada; /* Active tab color */
+    background-color: #dadada;
 }
+
 .buttonTab:first-child {
     border-radius: 15px 0 0 0;
     box-shadow: -3px 3px 1px rgba(0, 0, 0, 0.2);
 }
+
 .buttonTab:last-child {
     border-radius: 0 15px 0 0;
 }
+
 .buttonTab + .buttonTab {
-    border-left: 1px solid transparent; /* Ensure no visible border between tabs */
+    border-left: 1px solid transparent;
 }
 
-/* Media Queries for responsiveness */
+/* More Media Queries */
 @media (max-width: 768px) {
     body {
         padding: 20px;
     }
+
     h1, h3 {
         font-size: 1.2em;
     }
+
     .buttonTab {
         font-size: 0.8em;
         padding: 5px 10px;
@@ -124,16 +270,20 @@ h3:nth-of-type(2) {
         width: 100%;
         height: auto;
     }
-    h1, h3 {
-        font-size: 1em;
+
+    h1 {
+        font-size: 5em;
     }
+
     .buttonTab {
         font-size: 0.7em;
         padding: 3px 5px;
     }
+
     table {
         font-size: 0.8em;
     }
+
     th, td {
         padding: 10px;
     }

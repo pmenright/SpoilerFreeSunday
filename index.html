@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0ESXYTCV5P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0ESXYTCV5P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-0ESXYTCV5P');
-</script>
+        gtag('config', 'G-0ESXYTCV5P');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
@@ -21,11 +21,31 @@
 </head>
 <body>
     <div id="img-center">
-        <img src="sfs.png" alt="Image">
+        <img src="sfs.png" alt="Spoiler Free Sunday">
     </div>
-    <div id="img-center">
-        <h3 id="race-info">This week's race is [most recent race]. Stats update the Saturday before each race.</h3>
-        <h3 id="update-message">This page last updated </h3>
+    <div id="thisWeek">
+        <div class="raceContainer">
+            <div class="raceInfo">
+                <div class="infoDiv underlineDiv">
+                    <h1 id="cyanText">[Race]</h1>
+                    <h2 id="magentaText">[Round #]</h2>
+                </div>
+                <div class="infoDiv">
+                    <h2 class="trackName">[Circuit]</h2>
+                    <h2 class="trackDistance">[Length]</h2>
+                </div>
+                <div class="infoDiv">
+                    <h2 class="locationName">[Location]</h2>
+                    <h2 class="lapCount">[# Laps]</h2>
+                </div>
+                <div class="infoDiv rightAlignText">
+                    <h2>[Date]</h2>
+                </div>
+            </div>
+            <div class="trackMap">
+                <img src="tracks/track.svg" alt="Track Map">
+            </div>
+        </div>       
     </div>
     <div class="tabContainer">
         <button class="buttonTab active" onclick="openTab('driverStandings', this)">Driver Standings</button>
@@ -89,75 +109,123 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script>
-        async function displayCSVData(url, targetId, headers) {
-            const response = await fetch(url);
-            const data = await response.text();
-            const parsedData = Papa.parse(data.trim(), { header: headers }).data;
-            const tableBody = document.getElementById(targetId);
-
-            // Reverse the data order if displaying race results
-            if (targetId === 'race-results') {
-                parsedData.reverse();
-            }
-
-            if (headers) {
-                parsedData.forEach(row => {
-                    const tr = document.createElement('tr');
-                    for (const key in row) {
-                        const cell = document.createElement('td');
-                        cell.textContent = row[key].trim();
-                        tr.appendChild(cell);
-                    }
-                    tableBody.appendChild(tr);
-                });
-            } else {
-                parsedData.slice(1).forEach(row => {
-                    const tr = document.createElement('tr');
-                    row.forEach(cellData => {
-                        const cell = document.createElement('td');
-                        cell.textContent = cellData.trim();
-                        tr.appendChild(cell);
-                    });
-                    tableBody.appendChild(tr);
-                });
-            }
-        }
-
-        async function displayLastUpdatedTimestamp() {
-            const response = await fetch('timestamp.txt');
-            const timestamp = await response.text();
-            const updateMessage = document.getElementById('update-message');
-            updateMessage.textContent += timestamp;
-        }
-
-        async function updateRaceInfo() {
-            const response = await fetch('next_race.txt');
-            const nextRace = await response.text();
-            const raceInfo = document.getElementById('race-info');
-            raceInfo.textContent = `This week's race is ${nextRace}. Stats update the Saturday before each race.`;
-        }
-
-        function openTab(tabName, element) {
-            const tabs = document.getElementsByClassName("tab");
-            for (let i = 0; i < tabs.length; i++) {
-                tabs[i].style.display = "none";
-            }
-            document.getElementById(tabName).style.display = "block";
-
-            const tabButtons = document.getElementsByClassName("buttonTab");
-            for (let i = 0; i < tabButtons.length; i++) {
-                tabButtons[i].classList.remove("active");
-            }
-            element.classList.add("active");
-        }
-
         document.addEventListener("DOMContentLoaded", () => {
+            const today = new Date();
+            console.log("Today's date:", today); // Debug today's date
+    
+            // Fetch and parse the CSV file for race info
+            fetch('seasonSchedule.csv')
+                .then(response => response.text())
+                .then(data => {
+                    const parsedData = Papa.parse(data.trim(), { header: true }).data;
+                    console.log("Parsed CSV Data:", parsedData); // Debug parsed CSV data
+    
+                    // Ensure the date format in CSV is compatible (YYYY-MM-DD)
+                    let nextRace = null;
+                    for (let i = 0; i < parsedData.length; i++) {
+                        const raceDate = new Date(parsedData[i]["Check Date"].trim()); // Use "Check Date" column
+                        console.log("Checking race:", parsedData[i].Race, "on", raceDate); // Debug each race and its date
+    
+                        if (!isNaN(raceDate.getTime()) && raceDate >= today) {
+                            nextRace = parsedData[i];
+                            console.log("Next race found:", nextRace); // Debug the next race found
+                            break;
+                        }
+                    }
+    
+                    // If we found a race, update the HTML
+                    if (nextRace) {
+                        // Populate race information using correct class names
+                        const raceElement = document.getElementById('cyanText');
+                        const roundElement = document.getElementById('magentaText');
+                        const trackElement = document.querySelector('.trackName');
+                        const distanceElement = document.querySelector('.trackDistance');
+                        const locationElement = document.querySelector('.locationName');
+                        const lapsElement = document.querySelector('.lapCount');
+                        const dateElement = document.querySelector('.infoDiv.rightAlignText h2');
+                        const trackMapElement = document.querySelector('.trackMap img');
+    
+                        // Ensure all elements exist before updating them
+                        if (raceElement) raceElement.textContent = nextRace.Race;
+                        if (roundElement) roundElement.textContent = `Round ${nextRace.Round}`;
+                        if (trackElement) trackElement.textContent = nextRace.Track;
+                        if (distanceElement) distanceElement.textContent = `${nextRace.Distance}km`;
+                        if (locationElement) locationElement.textContent = nextRace.Location;
+                        if (lapsElement) lapsElement.textContent = `${nextRace.Laps} laps`;
+                        if (dateElement) dateElement.textContent = nextRace.Date;
+    
+                        // Update the track map image if the element exists
+                        if (trackMapElement) {
+                            const trackImageName = nextRace.Location.replace(/\s+/g, '-').toLowerCase();
+                            trackMapElement.src = `tracks/${trackImageName}.svg`;
+                        } else {
+                            console.error("Track map element not found.");
+                        }
+                    } else {
+                        console.error("No upcoming race found in the data.");
+                    }
+                })
+                .catch(error => console.error("Error fetching or parsing the CSV:", error));
+    
+            // Display CSV Data in tables
+            function displayCSVData(url, targetId, headers) {
+                fetch(url)
+                    .then(response => response.text())
+                    .then(data => {
+                        const parsedData = Papa.parse(data.trim(), { header: headers }).data;
+                        const tableBody = document.getElementById(targetId);
+    
+                        // Reverse the data order if displaying race results
+                        if (targetId === 'race-results') {
+                            parsedData.reverse();
+                        }
+    
+                        // Populate the table with the CSV data
+                        if (headers) {
+                            parsedData.forEach(row => {
+                                const tr = document.createElement('tr');
+                                for (const key in row) {
+                                    const cell = document.createElement('td');
+                                    cell.textContent = row[key].trim();
+                                    tr.appendChild(cell);
+                                }
+                                tableBody.appendChild(tr);
+                            });
+                        } else {
+                            parsedData.slice(1).forEach(row => {
+                                const tr = document.createElement('tr');
+                                row.forEach(cellData => {
+                                    const cell = document.createElement('td');
+                                    cell.textContent = cellData.trim();
+                                    tr.appendChild(cell);
+                                });
+                                tableBody.appendChild(tr);
+                            });
+                        }
+                    })
+                    .catch(error => console.error("Error fetching or parsing the CSV:", error));
+            }
+    
+            // Initial Tab Setup and Data Display
+            function openTab(tabName, element) {
+                const tabs = document.getElementsByClassName("tab");
+                for (let i = 0; i < tabs.length; i++) {
+                    tabs[i].style.display = "none";
+                }
+                document.getElementById(tabName).style.display = "block";
+    
+                const tabButtons = document.getElementsByClassName("buttonTab");
+                for (let i = 0; i < tabButtons.length; i++) {
+                    tabButtons[i].classList.remove("active");
+                }
+                element.classList.add("active");
+            }
+    
+            // Setup the default tab and display the CSV data for each section
             openTab('driverStandings', document.querySelector('.buttonTab.active'));
             displayCSVData('driver_standings.csv', 'driver-standings', true);
             displayCSVData('constructor_standings.csv', 'constructor-standings', true);
             displayCSVData('race_results.csv', 'race-results', true); // This will now display in reverse order
-            displayLastUpdatedTimestamp();
-            updateRaceInfo();
         });
     </script>
 </body>
