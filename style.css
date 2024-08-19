@@ -255,10 +255,6 @@ h2 {
         padding: 20px;
     }
 
-    h1, h3 {
-        font-size: 1.2em;
-    }
-
     .buttonTab {
         font-size: 0.8em;
         padding: 5px 10px;
@@ -269,10 +265,6 @@ h2 {
     img {
         width: 100%;
         height: auto;
-    }
-
-    h1 {
-        font-size: 5em;
     }
 
     .buttonTab {
