@@ -91,7 +91,7 @@ h2 {
     height: 45px;
     margin: 0;
     padding: 0;
-    flex-shrink: initial;
+    align-items: flex-start;
 }
 
 /* Race container layout */
@@ -108,6 +108,7 @@ h2 {
     width: 67%;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .trackMap {
