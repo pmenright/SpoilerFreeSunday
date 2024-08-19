@@ -80,7 +80,6 @@ h2 {
     display: inline-block;
 }
 
-/* Align thisWeekTag to the left side of its parent div */
 .thisWeek {
     padding: 0;
     margin: 0;
@@ -183,6 +182,12 @@ h2 {
     .trackMap {
         width: 80%;
         margin-top: 20px;
+    }
+
+    .thisWeekTag {
+        height: 25px;
+        padding: 0;
+        margin: 0;
     }
 
     .raceInfo {
