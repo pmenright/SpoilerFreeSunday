@@ -181,7 +181,7 @@ h2 {
 
 @media (max-width: 480px) {
     .trackMap {
-        width: 50%; /* Half width on phone screens */
+        width: 80%;
         margin-top: 20px;
     }
 
