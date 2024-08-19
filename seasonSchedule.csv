@@ -1,25 +1,25 @@
-Round,Location,Race,Laps,Distance,Track,Date,Check Date,
-1,Bahrain,Bahrain Grand Prix,57,5.412,Bahrain International Circuit,"Saturday, March 2",2024-03-02,
-2,Saudi Arabia,Saudi Arabian Grand Prix,50,6.174,"Jeddah Corniche Circuit on Saturday, March 9.","Saturday, March 9",2024-03-09,
-3,Australia,,,,,,,
-4,Japan,Japanese Grand Prix,53,5.807,"Suzuka Circuit on Sunday, April 7.","Sunday, April 7",,
-5,China,Chinese Grand Prix,56,5.451,"Shanghai International Circuit on Sunday, April 21.","Sunday, April 21",,
-6,Miami,,,,,,,
-7,Italy,Italian Grand Prix,53,5.793,Autodromo Nazionale Monza,"Sunday, September 1",,
-8,Monaco,Monaco Grand Prix,78,3.337,Circuit de Monaco,"Sunday, May 26",,
-9,Canada,Canadian Grand Prix,70,4.361,Circuit Gilles-Villeneuve,"Sunday, June 9",,
-10,Spain,Spanish Grand Prix,66,4.657,Circuit de Barcelona-Catalunya,"Sunday, June 23",,
-11,Austria,Austrian Grand Prix,71,4.318,Red Bull Ring,"Sunday, June 30",,
-12,Great Britain,British Grand Prix,52,5.891,Silverstone Circuit,"Sunday, July 7",,
-13,Hungary,Hungarian Grand Prix,70,4.381,Hungaroring,"Sunday, July 21",,
-14,Belgium,Belgian Grand Prix,44,7.004,Circuit de Spa-Francorchamps,"Sunday, July 28",,
-15,Netherlands,Dutch Grand Prix,72,4.259,Circuit Zandvoort,"Sunday, August 25",2024-08-25,
-16,Italy,Italian Grand Prix,53,5.793,Autodromo Nazionale Monza,"Sunday, September 1",2024-09-01,
-17,Azerbaijan,Azerbaijan Grand Prix,51,6.003,Baku City Circuit,"Sunday, September 15",2024-09-15,
-18,Singapore,Singapore Grand Prix,62,4.94,Marina Bay Street Circuit,"Sunday, September 22",2024-09-22,
-19,Austin,United States Grand Prix,56,5.513,Circuit of The Americas,"Sunday, October 20",2024-10-20,
-20,Mexico,Mexico City Grand Prix,71,4.304,Autodromo Hermanos Rodriguez,"Sunday, October 27",2024-10-27,
-21,Brazil,Sao Paulo Grand Prix,71,4.309,Autodromo Jose Carlos Pace,"Sunday, November 3",2024-11-03,
-22,Las Vegas,Las Vegas Grand Prix,50,6.2,Las Vegas Strip Circuit,"Saturday, November 23",2024-11-23,
-23,Qatar,Qatar Grand Prix,57,5.419,Lusail International Circuit,"Sunday, December 1",2024-12-01,
-24,United Arab Emirates,Abu Dhabi Grand Prix,58,5.281,Yas Marina Circuit on Yas Island,"Sunday, December 8",2024-12-08,
+Round,Location,Race,Laps,Distance,Track,Date,Check Date
+1,Bahrain,Bahrain Grand Prix,57,5.412,Bahrain International Circuit,"Saturday, March 2",2024-03-02
+2,Saudi Arabia,Saudi Arabian Grand Prix,50,6.174,"Jeddah Corniche Circuit on Saturday, March 9.","Saturday, March 9",2024-03-09
+3,Australia,,,,,,
+4,Japan,Japanese Grand Prix,53,5.807,"Suzuka Circuit on Sunday, April 7.","Sunday, April 7",
+5,China,Chinese Grand Prix,56,5.451,"Shanghai International Circuit on Sunday, April 21.","Sunday, April 21",
+6,Miami,,,,,,
+7,Italy,Italian Grand Prix,53,5.793,Autodromo Nazionale Monza,"Sunday, September 1",
+8,Monaco,Monaco Grand Prix,78,3.337,Circuit de Monaco,"Sunday, May 26",
+9,Canada,Canadian Grand Prix,70,4.361,Circuit Gilles-Villeneuve,"Sunday, June 9",
+10,Spain,Spanish Grand Prix,66,4.657,Circuit de Barcelona-Catalunya,"Sunday, June 23",
+11,Austria,Austrian Grand Prix,71,4.318,Red Bull Ring,"Sunday, June 30",
+12,Great Britain,British Grand Prix,52,5.891,Silverstone Circuit,"Sunday, July 7",
+13,Hungary,Hungarian Grand Prix,70,4.381,Hungaroring,"Sunday, July 21",
+14,Belgium,Belgian Grand Prix,44,7.004,Circuit de Spa-Francorchamps,"Sunday, July 28",
+15,Netherlands,Dutch Grand Prix,72,4.259,Circuit Zandvoort,"Sunday, August 25",2024-08-25
+16,Italy,Italian Grand Prix,53,5.793,Autodromo Nazionale Monza,"Sunday, September 1",2024-09-01
+17,Azerbaijan,Azerbaijan Grand Prix,51,6.003,Baku City Circuit,"Sunday, September 15",2024-09-15
+18,Singapore,Singapore Grand Prix,62,4.94,Marina Bay Street Circuit,"Sunday, September 22",2024-09-22
+19,Austin,United States Grand Prix,56,5.513,Circuit of The Americas,"Sunday, October 20",2024-10-20
+20,Mexico,Mexico City Grand Prix,71,4.304,Autodromo Hermanos Rodriguez,"Sunday, October 27",2024-10-27
+21,Brazil,Sao Paulo Grand Prix,71,4.309,Autodromo Jose Carlos Pace,"Sunday, November 3",2024-11-03
+22,Las Vegas,Las Vegas Grand Prix,50,6.2,Las Vegas Strip Circuit,"Saturday, November 23",2024-11-23
+23,Qatar,Qatar Grand Prix,57,5.419,Lusail International Circuit,"Sunday, December 1",2024-12-01
+24,United Arab Emirates,Abu Dhabi Grand Prix,58,5.281,Yas Marina Circuit on Yas Island,"Sunday, December 8",2024-12-08
