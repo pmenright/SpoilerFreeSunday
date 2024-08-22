@@ -114,7 +114,26 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script>
-     document.addEventListener("DOMContentLoaded", () => {
+     // Tab switching logic
+function openTab(tabName, element) {
+    // Hide all elements with class="tab"
+    const tabs = document.getElementsByClassName("tab");
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
+    }
+
+    // Remove the class "active" from all elements with class="buttonTab"
+    const tabButtons = document.getElementsByClassName("buttonTab");
+    for (let i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove("active");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    element.classList.add("active");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
     const today = new Date();
 
     // Fetch and parse the CSV file for race info
@@ -178,25 +197,6 @@
             .catch(error => console.error(`Error fetching or parsing CSV for ${targetId}:`, error));
     }
 
-    // Tab switching logic
-    function openTab(tabName, element) {
-        // Hide all elements with class="tab"
-        const tabs = document.getElementsByClassName("tab");
-        for (let i = 0; i < tabs.length; i++) {
-            tabs[i].style.display = "none";
-        }
-
-        // Remove the class "active" from all elements with class="buttonTab"
-        const tabButtons = document.getElementsByClassName("buttonTab");
-        for (let i = 0; i < tabButtons.length; i++) {
-            tabButtons[i].classList.remove("active");
-        }
-
-        // Show the current tab, and add an "active" class to the button that opened the tab
-        document.getElementById(tabName).style.display = "block";
-        element.classList.add("active");
-    }
-
     // Setup default tab on page load
     const defaultTab = document.querySelector('.buttonTab.active');
     if (defaultTab) {
@@ -209,7 +209,6 @@
     displayCSVData('constructor_standings.csv', 'constructor-standings', true);
     displayCSVData('race_results.csv', 'race-results', true);
 });
-
 
     </script>
 </body>
