@@ -115,126 +115,91 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const today = new Date();
-            console.log("Today's date:", today); // Debug today's date
-    
-            // Fetch and parse the CSV file for race info
-            fetch('seasonSchedule.csv')
-                .then(response => response.text())
-                .then(data => {
-                    const parsedData = Papa.parse(data.trim(), { header: true }).data;
-                    console.log("Parsed CSV Data:", parsedData); // Debug parsed CSV data
-    
-                    // Ensure the date format in CSV is compatible (YYYY-MM-DD)
-                    let nextRace = null;
-                    for (let i = 0; i < parsedData.length; i++) {
-                        const raceDate = new Date(parsedData[i]["Check Date"].trim());
-                        console.log("Checking race:", parsedData[i].Race, "on", raceDate); // Debug each race and its date
-    
-                        if (!isNaN(raceDate.getTime()) && raceDate >= today) {
-                            nextRace = parsedData[i];
-                            console.log("Next race found:", nextRace); // Debug the next race found
-                            break;
-                        }
-                    }
-    
-                    // If we found a race, update the HTML
-                    if (nextRace) {
-                        const raceElement = document.getElementById('cyanText');
-                        const roundElement = document.getElementById('magentaText');
-                        const trackElement = document.querySelector('.trackName');
-                        const distanceElement = document.querySelector('.trackDistance');
-                        const locationElement = document.querySelector('.locationName');
-                        const lapsElement = document.querySelector('.lapCount');
-                        const dateElement = document.querySelector('.infoDiv.rightAlignText h2');
-                        const trackMapElement = document.querySelector('.trackMap img');
-    
-                        // Ensure all elements exist before updating them
-                        if (raceElement) raceElement.textContent = nextRace.Race;
-                        if (roundElement) roundElement.textContent = `Round ${nextRace.Round}`;
-                        if (trackElement) trackElement.textContent = nextRace.Track;
-                        if (distanceElement) distanceElement.textContent = `${nextRace.Distance}km`;
-                        if (locationElement) locationElement.textContent = nextRace.Location;
-                        if (lapsElement) lapsElement.textContent = `${nextRace.Laps} laps`;
-                        if (dateElement) dateElement.textContent = nextRace.Date;
-    
-                        // Update the track map image if the element exists
-                        if (trackMapElement) {
-                            const trackImageName = nextRace.Location.replace(/\s+/g, '-');
-                            const trackImageUrl = `https://raw.githubusercontent.com/pmenright/SpoilerFreeSunday/main/tracks/${trackImageName}.svg`;
-                            
-                            console.log("Loading track map from:", trackImageUrl);
+    const today = new Date();
 
-                            trackMapElement.src = trackImageUrl;
-                        } else {
-                            console.error("Track map element not found.");
-                        }
-                    } else {
-                        console.error("No upcoming race found in the data.");
+    // Fetch and parse the CSV file for race info
+    fetch('seasonSchedule.csv')
+        .then(response => response.text())
+        .then(data => {
+            const parsedData = Papa.parse(data.trim(), { header: true }).data;
+
+            let nextRace = null;
+            for (let i = 0; i < parsedData.length; i++) {
+                const raceDate = new Date(parsedData[i]["Check Date"].trim());
+                if (!isNaN(raceDate.getTime()) && raceDate >= today) {
+                    nextRace = parsedData[i];
+                    break;
+                }
+            }
+
+            if (nextRace) {
+                document.getElementById('cyanText').textContent = nextRace.Race;
+                document.getElementById('magentaText').textContent = `Round ${nextRace.Round}`;
+                document.querySelector('.trackName').textContent = nextRace.Track;
+                document.querySelector('.trackDistance').textContent = `${nextRace.Distance}km`;
+                document.querySelector('.locationName').textContent = nextRace.Location;
+                document.querySelector('.lapCount').textContent = `${nextRace.Laps} laps`;
+                document.querySelector('.infoDiv.rightAlignText h2').textContent = nextRace.Date;
+
+                const trackMapElement = document.querySelector('.trackMap img');
+                const trackImageName = nextRace.Location.replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+                const trackImageUrl = `https://raw.githubusercontent.com/pmenright/SpoilerFreeSunday/main/tracks/${trackImageName}.svg`;
+                trackMapElement.src = trackImageUrl;
+            } else {
+                console.error("No upcoming race found in the data.");
+            }
+        })
+        .catch(error => console.error("Error fetching or parsing the CSV:", error));
+
+    // Display CSV Data in tables
+    function displayCSVData(url, targetId, headers) {
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                const parsedData = Papa.parse(data.trim(), { header: headers }).data;
+                const tableBody = document.getElementById(targetId);
+
+                tableBody.innerHTML = '';  // Clear existing rows before adding new data
+
+                if (targetId === 'race-results') {
+                    parsedData.reverse();
+                }
+
+                parsedData.forEach(row => {
+                    const tr = document.createElement('tr');
+                    for (const key in row) {
+                        const cell = document.createElement('td');
+                        cell.textContent = row[key].trim();
+                        tr.appendChild(cell);
                     }
-                })
-                .catch(error => console.error("Error fetching or parsing the CSV:", error));
-    
-            // Display CSV Data in tables
-            function displayCSVData(url, targetId, headers) {
-                fetch(url)
-                    .then(response => response.text())
-                    .then(data => {
-                        const parsedData = Papa.parse(data.trim(), { header: headers }).data;
-                        const tableBody = document.getElementById(targetId);
-    
-                        // Reverse the data order if displaying race results
-                        if (targetId === 'race-results') {
-                            parsedData.reverse();
-                        }
-    
-                        // Populate the table with the CSV data
-                        if (headers) {
-                            parsedData.forEach(row => {
-                                const tr = document.createElement('tr');
-                                for (const key in row) {
-                                    const cell = document.createElement('td');
-                                    cell.textContent = row[key].trim();
-                                    tr.appendChild(cell);
-                                }
-                                tableBody.appendChild(tr);
-                            });
-                        } else {
-                            parsedData.slice(1).forEach(row => {
-                                const tr = document.createElement('tr');
-                                row.forEach(cellData => {
-                                    const cell = document.createElement('td');
-                                    cell.textContent = cellData.trim();
-                                    tr.appendChild(cell);
-                                });
-                                tableBody.appendChild(tr);
-                            });
-                        }
-                    })
-                    .catch(error => console.error("Error fetching or parsing the CSV:", error));
-            }
-    
-            // Initial Tab Setup and Data Display
-            function openTab(tabName, element) {
-                const tabs = document.getElementsByClassName("tab");
-                for (let i = 0; i < tabs.length; i++) {
-                    tabs[i].style.display = "none";
-                }
-                document.getElementById(tabName).style.display = "block";
-    
-                const tabButtons = document.getElementsByClassName("buttonTab");
-                for (let i = 0; i < tabButtons.length; i++) {
-                    tabButtons[i].classList.remove("active");
-                }
-                element.classList.add("active");
-            }
-    
-            // Setup the default tab and display the CSV data for each section
-            openTab('driverStandings', document.querySelector('.buttonTab.active'));
-            displayCSVData('driver_standings.csv', 'driver-standings', true);
-            displayCSVData('constructor_standings.csv', 'constructor-standings', true);
-            displayCSVData('race_results.csv', 'race-results', true); // This will now display in reverse order
-        });
+                    tableBody.appendChild(tr);
+                });
+            })
+            .catch(error => console.error(`Error fetching or parsing CSV for ${targetId}:`, error));
+    }
+
+    // Initial Tab Setup and Data Display
+    function openTab(tabName, element) {
+        const tabs = document.getElementsByClassName("tab");
+        for (let i = 0; i < tabs.length; i++) {
+            tabs[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+
+        const tabButtons = document.getElementsByClassName("buttonTab");
+        for (let i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+        element.classList.add("active");
+    }
+
+    // Setup the default tab and display the CSV data for each section
+    openTab('driverStandings', document.querySelector('.buttonTab.active'));
+    displayCSVData('driver_standings.csv', 'driver-standings', true);
+    displayCSVData('constructor_standings.csv', 'constructor-standings', true);
+    displayCSVData('race_results.csv', 'race-results', true);
+});
+
     </script>
 </body>
 </html>
