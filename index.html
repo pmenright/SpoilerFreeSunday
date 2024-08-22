@@ -114,7 +114,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
+     document.addEventListener("DOMContentLoaded", () => {
     const today = new Date();
 
     // Fetch and parse the CSV file for race info
@@ -178,47 +178,38 @@
             .catch(error => console.error(`Error fetching or parsing CSV for ${targetId}:`, error));
     }
 
-    // Initial Tab Setup and Data Display
+    // Tab switching logic
     function openTab(tabName, element) {
-    // Hide all elements with class="tab"
-    const tabs = document.getElementsByClassName("tab");
-    for (let i = 0; i < tabs.length; i++) {
-        tabs[i].style.display = "none";
+        // Hide all elements with class="tab"
+        const tabs = document.getElementsByClassName("tab");
+        for (let i = 0; i < tabs.length; i++) {
+            tabs[i].style.display = "none";
+        }
+
+        // Remove the class "active" from all elements with class="buttonTab"
+        const tabButtons = document.getElementsByClassName("buttonTab");
+        for (let i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove("active");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(tabName).style.display = "block";
+        element.classList.add("active");
     }
 
-    // Remove the class "active" from all elements with class="buttonTab"
-    const tabButtons = document.getElementsByClassName("buttonTab");
-    for (let i = 0; i < tabButtons.length; i++) {
-        tabButtons[i].classList.remove("active");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(tabName).style.display = "block";
-    element.classList.add("active");
-}
-
-// Call the openTab function on page load to ensure the correct tab is shown
-document.addEventListener("DOMContentLoaded", function() {
+    // Setup default tab on page load
     const defaultTab = document.querySelector('.buttonTab.active');
     if (defaultTab) {
-        // Open the default active tab
         const defaultTabName = defaultTab.getAttribute('onclick').match(/'([^']+)'/)[1];
         openTab(defaultTabName, defaultTab);
-    } else {
-        // Fallback: Open the first tab by default if no active tab is found
-        const firstTabButton = document.querySelector('.buttonTab');
-        if (firstTabButton) {
-            openTab('driverStandings', firstTabButton); // Or whatever your default tab is
-        }
     }
-});
 
-    // Setup the default tab and display the CSV data for each section
-    openTab('driverStandings', document.querySelector('.buttonTab.active'));
+    // Load data for each section
     displayCSVData('driver_standings.csv', 'driver-standings', true);
     displayCSVData('constructor_standings.csv', 'constructor-standings', true);
     displayCSVData('race_results.csv', 'race-results', true);
 });
+
 
     </script>
 </body>
