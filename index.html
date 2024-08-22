@@ -180,18 +180,38 @@
 
     // Initial Tab Setup and Data Display
     function openTab(tabName, element) {
-        const tabs = document.getElementsByClassName("tab");
-        for (let i = 0; i < tabs.length; i++) {
-            tabs[i].style.display = "none";
-        }
-        document.getElementById(tabName).style.display = "block";
-
-        const tabButtons = document.getElementsByClassName("buttonTab");
-        for (let i = 0; i < tabButtons.length; i++) {
-            tabButtons[i].classList.remove("active");
-        }
-        element.classList.add("active");
+    // Hide all elements with class="tab"
+    const tabs = document.getElementsByClassName("tab");
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].style.display = "none";
     }
+
+    // Remove the class "active" from all elements with class="buttonTab"
+    const tabButtons = document.getElementsByClassName("buttonTab");
+    for (let i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove("active");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    element.classList.add("active");
+}
+
+// Call the openTab function on page load to ensure the correct tab is shown
+document.addEventListener("DOMContentLoaded", function() {
+    const defaultTab = document.querySelector('.buttonTab.active');
+    if (defaultTab) {
+        // Open the default active tab
+        const defaultTabName = defaultTab.getAttribute('onclick').match(/'([^']+)'/)[1];
+        openTab(defaultTabName, defaultTab);
+    } else {
+        // Fallback: Open the first tab by default if no active tab is found
+        const firstTabButton = document.querySelector('.buttonTab');
+        if (firstTabButton) {
+            openTab('driverStandings', firstTabButton); // Or whatever your default tab is
+        }
+    }
+});
 
     // Setup the default tab and display the CSV data for each section
     openTab('driverStandings', document.querySelector('.buttonTab.active'));
