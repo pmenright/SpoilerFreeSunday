@@ -136,36 +136,42 @@ function openTab(tabName, element) {
 document.addEventListener("DOMContentLoaded", () => {
     const today = new Date();
 
+    // Get the most recent Sunday
+    const lastSunday = new Date(today);
+    lastSunday.setDate(today.getDate() - today.getDay()); // Adjusts to last Sunday
+
     // Fetch and parse the CSV file for race info
     fetch('seasonSchedule.csv')
         .then(response => response.text())
         .then(data => {
             const parsedData = Papa.parse(data.trim(), { header: true }).data;
 
-            let nextRace = null;
+            let previousRace = null;
+
             for (let i = 0; i < parsedData.length; i++) {
                 const raceDate = new Date(parsedData[i]["Check Date"].trim());
-                if (!isNaN(raceDate.getTime()) && raceDate >= today) {
-                    nextRace = parsedData[i];
-                    break;
+
+                // Find the most recent race that occurred on or before last Sunday
+                if (!isNaN(raceDate.getTime()) && raceDate <= lastSunday) {
+                    previousRace = parsedData[i];
                 }
             }
 
-            if (nextRace) {
-                document.getElementById('cyanText').textContent = nextRace.Race;
-                document.getElementById('magentaText').textContent = `Round ${nextRace.Round}`;
-                document.querySelector('.trackName').textContent = nextRace.Track;
-                document.querySelector('.trackDistance').textContent = `${nextRace.Distance}km`;
-                document.querySelector('.locationName').textContent = nextRace.Location;
-                document.querySelector('.lapCount').textContent = `${nextRace.Laps} laps`;
-                document.querySelector('.infoDiv.rightAlignText h2').textContent = nextRace.Date;
+            if (previousRace) {
+                document.getElementById('cyanText').textContent = previousRace.Race;
+                document.getElementById('magentaText').textContent = `Round ${previousRace.Round}`;
+                document.querySelector('.trackName').textContent = previousRace.Track;
+                document.querySelector('.trackDistance').textContent = `${previousRace.Distance}km`;
+                document.querySelector('.locationName').textContent = previousRace.Location;
+                document.querySelector('.lapCount').textContent = `${previousRace.Laps} laps`;
+                document.querySelector('.infoDiv.rightAlignText h2').textContent = previousRace.Date;
 
                 const trackMapElement = document.querySelector('.trackMap img');
-                const trackImageName = nextRace.Location.replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+                const trackImageName = previousRace.Location.replace(/\s+/g, '-').replace(/[^\w-]/g, '');
                 const trackImageUrl = `https://raw.githubusercontent.com/pmenright/SpoilerFreeSunday/main/tracks/${trackImageName}.svg`;
                 trackMapElement.src = trackImageUrl;
             } else {
-                console.error("No upcoming race found in the data.");
+                console.error("No previous race found in the data.");
             }
         })
         .catch(error => console.error("Error fetching or parsing the CSV:", error));
