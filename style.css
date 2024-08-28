@@ -12,11 +12,13 @@ body {
     font-family: 'Bahnschrift', sans-serif;
 }
 
-img {
+.heroImg {
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+
 
 #img-center {
     text-align: center;
@@ -117,6 +119,7 @@ h2 {
 
 .trackMap {
     width: 33%;
+    padding-left: 60px;
 }
 
 /* Ensure trackMap image takes up the full width */
@@ -146,16 +149,23 @@ h2 {
     text-align: right;
 }
 
+.topThree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 .underlineDiv {
     border-bottom: 2px solid #a0a0a0;
 }
 
 /* Cyan and Magenta color for text */
-#cyanText {
+.cyanText {
     color: #00bcd4; /* Cyan color */
 }
 
-#magentaText {
+.magentaText {
     color: #ff4081;
     margin-bottom: 10px;
 }

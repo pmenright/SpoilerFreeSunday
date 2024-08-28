@@ -24,7 +24,7 @@
 </head>
 <body>
     <div id="img-center">
-        <img src="sfs.png" alt="Spoiler Free Sunday">
+        <img class="heroImg" src="sfs.png" alt="Spoiler Free Sunday">
     </div>
         <div class="raceContainer">
             <div class="raceInfo">
@@ -32,8 +32,8 @@
                     <img class="thisWeekTag" src="thisWeek.svg" alt="This Week">
                 </div>
                 <div class="infoDiv underlineDiv">
-                    <h1 id="cyanText">[Race]</h1>
-                    <h2 id="magentaText">[Round #]</h2>
+                    <h1 class="cyanText">[Race]</h1>
+                    <h2 class="magentaText">[Round #]</h2>
                 </div>
                 <div class="infoDiv">
                     <h2 class="trackName">[Circuit]</h2>
@@ -45,6 +45,17 @@
                 </div>
                 <div class="infoDiv rightAlignText">
                     <h2>[Date]</h2>
+                </div>
+                <div class="infoDiv">
+                    <h2 class="magentaText">2023 Winners</h2>
+                </div>
+                <div class="topThree">
+                    <img class="thisWeekTag" src="1st.svg" alt="First Place">
+                    <h2 class="firstPlace">[Name]</h2>
+                    <img class="thisWeekTag" src="2nd.svg" alt="Second Place">
+                    <h2 class="secondPlace">[Name]</h2>
+                    <img class="thisWeekTag" src="3rd.svg" alt="Third Place">
+                    <h2 class="thirdPlace">[Name]</h2>
                 </div>
             </div>
             <div class="trackMap">
@@ -114,108 +125,137 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <script>
-     // Tab switching logic
-function openTab(tabName, element) {
-    // Hide all elements with class="tab"
-    const tabs = document.getElementsByClassName("tab");
-    for (let i = 0; i < tabs.length; i++) {
-        tabs[i].style.display = "none";
-    }
-
-    // Remove the class "active" from all elements with class="buttonTab"
-    const tabButtons = document.getElementsByClassName("buttonTab");
-    for (let i = 0; i < tabButtons.length; i++) {
-        tabButtons[i].classList.remove("active");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(tabName).style.display = "block";
-    element.classList.add("active");
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    const today = new Date();
-
-    // Get the most recent Sunday
-    const lastSunday = new Date(today);
-    lastSunday.setDate(today.getDate() - today.getDay()); // Adjusts to last Sunday
-
-    // Fetch and parse the CSV file for race info
-    fetch('seasonSchedule.csv')
-        .then(response => response.text())
-        .then(data => {
-            const parsedData = Papa.parse(data.trim(), { header: true }).data;
-
-            let previousRace = null;
-
-            for (let i = 0; i < parsedData.length; i++) {
-                const raceDate = new Date(parsedData[i]["Check Date"].trim());
-
-                // Find the most recent race that occurred on or before last Sunday
-                if (!isNaN(raceDate.getTime()) && raceDate <= lastSunday) {
-                    previousRace = parsedData[i];
-                }
-            }
-
-            if (previousRace) {
-                document.getElementById('cyanText').textContent = previousRace.Race;
-                document.getElementById('magentaText').textContent = `Round ${previousRace.Round}`;
-                document.querySelector('.trackName').textContent = previousRace.Track;
-                document.querySelector('.trackDistance').textContent = `${previousRace.Distance}km`;
-                document.querySelector('.locationName').textContent = previousRace.Location;
-                document.querySelector('.lapCount').textContent = `${previousRace.Laps} laps`;
-                document.querySelector('.infoDiv.rightAlignText h2').textContent = previousRace.Date;
-
-                const trackMapElement = document.querySelector('.trackMap img');
-                const trackImageName = previousRace.Location.replace(/\s+/g, '-').replace(/[^\w-]/g, '');
-                const trackImageUrl = `https://raw.githubusercontent.com/pmenright/SpoilerFreeSunday/main/tracks/${trackImageName}.svg`;
-                trackMapElement.src = trackImageUrl;
-            } else {
-                console.error("No previous race found in the data.");
-            }
-        })
-        .catch(error => console.error("Error fetching or parsing the CSV:", error));
-
-    // Display CSV Data in tables
-    function displayCSVData(url, targetId, headers) {
-        fetch(url)
-            .then(response => response.text())
-            .then(data => {
-                const parsedData = Papa.parse(data.trim(), { header: headers }).data;
-                const tableBody = document.getElementById(targetId);
-
-                tableBody.innerHTML = '';  // Clear existing rows before adding new data
-
-                if (targetId === 'race-results') {
-                    parsedData.reverse();
-                }
-
-                parsedData.forEach(row => {
-                    const tr = document.createElement('tr');
-                    for (const key in row) {
-                        const cell = document.createElement('td');
-                        cell.textContent = row[key].trim();
-                        tr.appendChild(cell);
+        document.addEventListener("DOMContentLoaded", () => {
+            const today = new Date();
+    
+            // Get the most recent Sunday
+            const lastSunday = new Date(today);
+            lastSunday.setDate(today.getDate() - today.getDay()); // Adjusts to last Sunday
+    
+            let locationName = ''; // Variable to store the location name
+    
+            // Fetch and parse the season schedule CSV file for race info
+            fetch('seasonSchedule.csv')
+                .then(response => response.text())
+                .then(data => {
+                    const parsedData = Papa.parse(data.trim(), { header: true }).data;
+    
+                    let previousRace = null;
+    
+                    for (let i = 0; i < parsedData.length; i++) {
+                        const raceDate = new Date(parsedData[i]["Check Date"].trim());
+    
+                        // Find the most recent race that occurred on or before last Sunday
+                        if (!isNaN(raceDate.getTime()) && raceDate <= lastSunday) {
+                            previousRace = parsedData[i];
+                        }
                     }
-                    tableBody.appendChild(tr);
-                });
-            })
-            .catch(error => console.error(`Error fetching or parsing CSV for ${targetId}:`, error));
-    }
-
-    // Setup default tab on page load
-    const defaultTab = document.querySelector('.buttonTab.active');
-    if (defaultTab) {
-        const defaultTabName = defaultTab.getAttribute('onclick').match(/'([^']+)'/)[1];
-        openTab(defaultTabName, defaultTab);
-    }
-
-    // Load data for each section
-    displayCSVData('driver_standings.csv', 'driver-standings', true);
-    displayCSVData('constructor_standings.csv', 'constructor-standings', true);
-    displayCSVData('race_results.csv', 'race-results', true);
-});
-
+    
+                    if (previousRace) {
+                        document.querySelector('.cyanText').textContent = previousRace.Race;
+                        document.querySelector('.magentaText').textContent = `Round ${previousRace.Round}`;
+                        document.querySelector('.trackName').textContent = previousRace.Track;
+                        document.querySelector('.trackDistance').textContent = `${previousRace.Distance}km`;
+                        document.querySelector('.locationName').textContent = previousRace.Location;
+                        document.querySelector('.lapCount').textContent = `${previousRace.Laps} laps`;
+                        document.querySelector('.infoDiv.rightAlignText h2').textContent = previousRace.Date;
+    
+                        const trackMapElement = document.querySelector('.trackMap img');
+                        const trackImageName = previousRace.Location.replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+                        const trackImageUrl = `https://raw.githubusercontent.com/pmenright/SpoilerFreeSunday/main/tracks/${trackImageName}.svg`;
+                        trackMapElement.src = trackImageUrl;
+    
+                        locationName = previousRace.Location; // Save the location name
+                        loadTopThreeDrivers(locationName); // Load the top three drivers for the race
+                    } else {
+                        console.error("No previous race found in the data.");
+                    }
+                })
+                .catch(error => console.error("Error fetching or parsing the season schedule CSV:", error));
+    
+            // Function to load the top three drivers from the CSV file
+            function loadTopThreeDrivers(locationName) {
+                console.log(`Location Name being used: ${locationName}`); // Debugging statement
+    
+                fetch('2023TopThree.csv')
+                    .then(response => response.text())
+                    .then(data => {
+                        const parsedData = Papa.parse(data, { header: true }).data;
+                        for (let i = 0; i < parsedData.length; i++) {
+                            console.log(`Comparing with Grand Prix: ${parsedData[i]['Grand Prix']}`);
+                            if (parsedData[i]['Grand Prix'].trim() === locationName) {
+                                console.log(`Match found for ${locationName}`);
+                                document.querySelector('.firstPlace').textContent = parsedData[i]['1st Place'];
+                                document.querySelector('.secondPlace').textContent = parsedData[i]['2nd Place'];
+                                document.querySelector('.thirdPlace').textContent = parsedData[i]['3rd Place'];
+                                break;
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching or parsing the 2023 top three drivers CSV:', error);
+                    });
+            }
+    
+            // Function to display CSV Data in tables
+            function displayCSVData(url, targetId, headers) {
+                fetch(url)
+                    .then(response => response.text())
+                    .then(data => {
+                        const parsedData = Papa.parse(data.trim(), { header: headers }).data;
+                        const tableBody = document.getElementById(targetId);
+    
+                        tableBody.innerHTML = '';  // Clear existing rows before adding new data
+    
+                        if (targetId === 'race-results') {
+                            parsedData.reverse();
+                        }
+    
+                        parsedData.forEach(row => {
+                            const tr = document.createElement('tr');
+                            for (const key in row) {
+                                const cell = document.createElement('td');
+                                cell.textContent = row[key].trim();
+                                tr.appendChild(cell);
+                            }
+                            tableBody.appendChild(tr);
+                        });
+                    })
+                    .catch(error => console.error(`Error fetching or parsing CSV for ${targetId}:`, error));
+            }
+    
+            // Setup default tab on page load
+            const defaultTab = document.querySelector('.buttonTab.active');
+            if (defaultTab) {
+                const defaultTabName = defaultTab.getAttribute('onclick').match(/'([^']+)'/)[1];
+                openTab(defaultTabName, defaultTab);
+            }
+    
+            // Load data for each section
+            displayCSVData('driver_standings.csv', 'driver-standings', true);
+            displayCSVData('constructor_standings.csv', 'constructor-standings', true);
+            displayCSVData('race_results.csv', 'race-results', true);
+        });
+    
+        // Tab switching logic
+        function openTab(tabName, element) {
+            // Hide all elements with class="tab"
+            const tabs = document.getElementsByClassName("tab");
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = "none";
+            }
+    
+            // Remove the class "active" from all elements with class="buttonTab"
+            const tabButtons = document.getElementsByClassName("buttonTab");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+    
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            element.classList.add("active");
+        }
     </script>
+    
 </body>
 </html>
