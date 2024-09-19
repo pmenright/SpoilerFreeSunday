@@ -93,7 +93,7 @@ h2 {
     width: 100%;
 }
 
-.thisWeekTag {
+.thisWeekTag, .positionTag {
     height: 45px;
     margin: 0;
     padding: 0;
@@ -156,7 +156,7 @@ h2 {
     gap: 20px;
 }
 
-.underlineDiv {
+.firstDiv {
     border-bottom: 2px solid #a0a0a0;
 }
 
@@ -199,9 +199,6 @@ h2 {
         margin-top: 20px;
     }
 
-    .thisWeekTag {
-        display: none;
-    }
 
     .raceInfo {
         width: 100%;
@@ -274,28 +271,65 @@ h2 {
         padding: 20px;
     }
 
-    .buttonTab {
-        font-size: 0.8em;
-        padding: 5px 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    img {
-        width: 100%;
-        height: auto;
-    }
-
-    .buttonTab {
-        font-size: 0.7em;
-        padding: 3px 5px;
-    }
-
     table {
         font-size: 0.8em;
     }
 
     th, td {
         padding: 10px;
+    }
+
+    .firstDiv {
+        display: inline-block;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .positionTag {
+        height: 50px;
+    }
+
+    /* Set the images and h2s to be on the same line for each position */
+    .positionTag:nth-child(1), .firstPlace {
+        display: flex;
+        align-items: center;
+    }
+
+    .positionTag:nth-child(3), .secondPlace {
+        display: flex;
+        align-items: center;
+    }
+
+    .positionTag:nth-child(5), .thirdPlace {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Ensures that the container aligns the items in two columns */
+    .topThree {
+        display: flex;
+        gap: 10px;
+    }
+
+    /* Make sure the image and text (position and driver name) are aligned in one row */
+    .topThree img.positionTag, .topThree h2 {
+        display: inline-flex;
+        vertical-align: middle;
+    }
+
+    /* Ensure both elements stay together */
+    .topThree img.positionTag {
+        width: 50px; /* Adjust the size for smaller screens */
+        margin-right: 8px; /* Adds space between the image and the text */
+    }
+
+    .topThree h2 {
+        font-size: 1em; /* Adjust the font size as per mobile display */
+        margin: 0;
+    }
+    
+    /* Group image and h2 as one unit and ensure they stay on the same row */
+    .topThree > * {
+        flex: 1 1 auto;
     }
 }
