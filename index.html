@@ -26,11 +26,12 @@
     <div id="img-center">
         <img class="heroImg" src="sfs.png" alt="Spoiler Free Sunday">
     </div>
-        <div class="raceContainer">
-            <div class="raceInfo">
-                <div class="tagContainer">
-                    <img class="thisWeekTag" src="thisWeek.svg" alt="This Week">
-                </div>
+    <div class="raceContainer">
+        <div class="raceInfo">
+            <div class="tagContainer">
+                <img class="thisWeekTag" src="thisWeek.svg" alt="This Week">
+                <h2 class="dateText">[Date]</h2>
+            </div>
                 <div class="infoDiv firstDiv">
                     <h1 class="cyanText">[Race]</h1>
                     <h2 class="magentaText">[Round #]</h2>
@@ -43,20 +44,25 @@
                     <h2 class="locationName">[Location]</h2>
                     <h2 class="lapCount">[# Laps]</h2>
                 </div>
-                <div class="infoDiv rightAlignText">
-                    <h2>[Date]</h2>
-                </div>
                 <div class="infoDiv">
                     <h2 class="magentaText">2023 Winners</h2>
                 </div>
                 <div class="topThree">
-                    <img class="positionTag" src="1st.svg" alt="First Place">
-                    <h2 class="firstPlace">[Name]</h2>
-                    <img class="positionTag" src="2nd.svg" alt="Second Place">
-                    <h2 class="secondPlace">[Name]</h2>
-                    <img class="positionTag" src="3rd.svg" alt="Third Place">
-                    <h2 class="thirdPlace">[Name]</h2>
-                </div>                
+                    <div class="topThreePair">
+                        <img class="positionTag" src="1st.svg" alt="First Place">
+                        <h2 class="firstPlace">[Name]</h2>
+                    </div>
+                    <div class="topThreePair">
+                        <img class="positionTag" src="2nd.svg" alt="Second Place">
+                        <h2 class="secondPlace">[Name]</h2>
+                    </div>
+                    <div class="topThreePair">
+                        <img class="positionTag" src="3rd.svg" alt="Third Place">
+                        <h2 class="thirdPlace">[Name]</h2>
+                    </div>
+                </div>
+                
+                               
             </div>
             <div class="trackMap">
                 <img src="tracks/track.svg" alt="Track Map">
@@ -158,8 +164,8 @@
                         document.querySelector('.trackDistance').textContent = `${previousRace.Distance}km`;
                         document.querySelector('.locationName').textContent = previousRace.Location;
                         document.querySelector('.lapCount').textContent = `${previousRace.Laps} laps`;
-                        document.querySelector('.infoDiv.rightAlignText h2').textContent = previousRace.Date;
-    
+                        document.querySelector('.dateText').textContent = previousRace.Date;
+
                         const trackMapElement = document.querySelector('.trackMap img');
                         const trackImageName = previousRace.Location.replace(/\s+/g, '-').replace(/[^\w-]/g, '');
                         const trackImageUrl = `https://raw.githubusercontent.com/pmenright/SpoilerFreeSunday/main/tracks/${trackImageName}.svg`;

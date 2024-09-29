@@ -100,6 +100,24 @@ h2 {
     align-items: flex-start;
 }
 
+.tagContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px; /* Add margin if needed */
+}
+
+.dateText {
+    font-family: 'Bahnschrift', sans-serif;
+    font-weight: 100;
+    text-align: right;
+    color: rgb(45, 45, 45);
+    margin: 0;
+}
+
+
+
 /* Race container layout */
 .raceContainer {
     display: flex;
@@ -154,6 +172,21 @@ h2 {
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.topThreePair {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.topThreePair h2 {
+    font-family: 'Bahnschrift', sans-serif;
+    font-weight: 100;
+    color: rgb(45, 45, 45);
+    margin: 5px 0 0 0;
 }
 
 .firstDiv {
@@ -286,7 +319,8 @@ h2 {
     }
 
     .positionTag {
-        height: 50px;
+        height: 35px;
+        margin-bottom: 10px;
     }
 
     /* Set the images and h2s to be on the same line for each position */
@@ -305,31 +339,41 @@ h2 {
         align-items: center;
     }
 
-    /* Ensures that the container aligns the items in two columns */
     .topThree {
         display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         gap: 10px;
     }
-
-    /* Make sure the image and text (position and driver name) are aligned in one row */
-    .topThree img.positionTag, .topThree h2 {
-        display: inline-flex;
-        vertical-align: middle;
-    }
-
-    /* Ensure both elements stay together */
-    .topThree img.positionTag {
-        width: 50px; /* Adjust the size for smaller screens */
-        margin-right: 8px; /* Adds space between the image and the text */
-    }
-
-    .topThree h2 {
-        font-size: 1em; /* Adjust the font size as per mobile display */
-        margin: 0;
+    
+    .topThreePair {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        width: 100%; /* Make the pair occupy full width */
+        padding-right: 0;
+        margin: 0; /* Remove any default margins */
     }
     
-    /* Group image and h2 as one unit and ensure they stay on the same row */
-    .topThree > * {
-        flex: 1 1 auto;
+    .topThree h2 {
+        font-size: 1.2em; /* Adjust size of text */
+        margin: 0; /* Remove any unwanted margin */
     }
+
+    .raceContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trackMap {
+        width: 80%; /* Full width on smaller screens */
+        margin-top: 20px;
+    }
+
+    .raceInfo {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
 }
