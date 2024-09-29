@@ -208,49 +208,6 @@ h2 {
     justify-content: flex-end; /* Aligns all flex items to the right */
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .raceContainer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .trackMap {
-        width: 100%; /* Full width on smaller screens */
-        margin-top: 20px;
-    }
-
-    .raceInfo {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .trackMap {
-        width: 80%;
-        margin-top: 20px;
-    }
-
-
-    .raceInfo {
-        width: 100%;
-    }
-
-    #cyanText {
-        font-size: 1.8rem;
-    }
-
-    #magentaText {
-        font-size: 1rem;
-    }
-
-    h2 {
-        font-size: 1rem;
-    }
-}
-
-/* Tab container */
 .tabContainer {
     margin-top: 20px;
     display: flex;
@@ -298,7 +255,8 @@ h2 {
     border-left: 1px solid transparent;
 }
 
-/* More Media Queries */
+
+/* Media Queries for responsiveness */
 @media (max-width: 768px) {
     body {
         padding: 20px;
@@ -306,6 +264,7 @@ h2 {
 
     table {
         font-size: 0.8em;
+        border-radius: 0 0 15px 15px;
     }
 
     th, td {
@@ -374,6 +333,37 @@ h2 {
         width: 100%;
         margin-bottom: 20px;
     }
+
+    .raceContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
+@media (max-width: 480px) {
+    .trackMap {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .wrapper {
+        border-radius: 0 0 15px 15px;
+    }
+
+    .raceInfo {
+        width: 100%;
+    }
+
+    #cyanText {
+        font-size: 1.8rem;
+    }
+
+    .magentaText {
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
 }
