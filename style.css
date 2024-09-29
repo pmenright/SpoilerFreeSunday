@@ -325,8 +325,17 @@ h2 {
     }
 
     .trackMap {
-        width: 80%; /* Full width on smaller screens */
+        width: 80%; /* Adjust width as needed */
+        padding-left: 0; /* Remove left padding */
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center;    /* Center vertically if needed */
         margin-top: 20px;
+    }
+
+    .trackMap img {
+        width: 100%;
+        height: auto;
     }
 
     .raceInfo {
@@ -343,8 +352,17 @@ h2 {
 
 @media (max-width: 480px) {
     .trackMap {
-        width: 80%;
+        width: 80%; /* Adjust width as needed */
+        padding-left: 0; /* Remove left padding */
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center;    /* Center vertically if needed */
         margin-top: 20px;
+    }
+
+    .trackMap img {
+        width: 100%;
+        height: auto;
     }
 
     .wrapper {
