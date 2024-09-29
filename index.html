@@ -133,30 +133,30 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const today = new Date();
-    
+
             // Get the most recent Sunday
             const lastSunday = new Date(today);
             lastSunday.setDate(today.getDate() - today.getDay()); // Adjusts to last Sunday
-    
+
             let locationName = ''; // Variable to store the location name
-    
+
             // Fetch and parse the season schedule CSV file for race info
             fetch('seasonSchedule.csv')
                 .then(response => response.text())
                 .then(data => {
                     const parsedData = Papa.parse(data.trim(), { header: true }).data;
-    
+
                     let previousRace = null;
-    
+
                     for (let i = 0; i < parsedData.length; i++) {
                         const raceDate = new Date(parsedData[i]["Check Date"].trim());
-    
+
                         // Find the most recent race that occurred on or before last Sunday
                         if (!isNaN(raceDate.getTime()) && raceDate <= lastSunday) {
                             previousRace = parsedData[i];
                         }
                     }
-    
+
                     if (previousRace) {
                         document.querySelector('.cyanText').textContent = previousRace.Race;
                         document.querySelector('.magentaText').textContent = `Round ${previousRace.Round}`;
@@ -165,12 +165,12 @@
                         document.querySelector('.locationName').textContent = previousRace.Location;
                         document.querySelector('.lapCount').textContent = `${previousRace.Laps} laps`;
                         document.querySelector('.dateText').textContent = previousRace.Date;
-    
+
                         const trackMapElement = document.querySelector('.trackMap img');
                         const trackImageName = previousRace.Location.replace(/\s+/g, '-').replace(/[^\w-]/g, '');
                         const trackImageUrl = `https://raw.githubusercontent.com/pmenright/SpoilerFreeSunday/main/tracks/${trackImageName}.svg`;
                         trackMapElement.src = trackImageUrl;
-    
+
                         locationName = previousRace.Location; // Save the location name
                         loadTopThreeDrivers(locationName); // Load the top three drivers for the race
                     } else {
@@ -178,11 +178,11 @@
                     }
                 })
                 .catch(error => console.error("Error fetching or parsing the season schedule CSV:", error));
-    
+
             // Function to load the top three drivers from the CSV file
             function loadTopThreeDrivers(locationName) {
                 console.log(`Location Name being used: ${locationName}`); // Debugging statement
-    
+
                 fetch('2023TopThree.csv')
                     .then(response => response.text())
                     .then(data => {
@@ -202,7 +202,7 @@
                         console.error('Error fetching or parsing the 2023 top three drivers CSV:', error);
                     });
             }
-    
+
             // Function to display CSV Data in tables
             function displayCSVData(url, targetId, headers) {
                 fetch(url)
@@ -210,13 +210,13 @@
                     .then(data => {
                         const parsedData = Papa.parse(data.trim(), { header: headers }).data;
                         const tableBody = document.getElementById(targetId);
-    
+
                         tableBody.innerHTML = '';  // Clear existing rows before adding new data
-    
+
                         if (targetId === 'race-results') {
                             parsedData.reverse();
                         }
-    
+
                         parsedData.forEach(row => {
                             const tr = document.createElement('tr');
                             for (const key in row) {
@@ -229,12 +229,12 @@
                     })
                     .catch(error => console.error(`Error fetching or parsing CSV for ${targetId}:`, error));
             }
-    
+
             // Load data for each section
             displayCSVData('driver_standings.csv', 'driver-standings', true);
             displayCSVData('constructor_standings.csv', 'constructor-standings', true);
             displayCSVData('race_results.csv', 'race-results', true);
-    
+
             // Function to adjust table headers based on screen width
             function adjustTableHeaders() {
                 const screenWidth = window.innerWidth;
@@ -250,42 +250,42 @@
                     }
                 }
             }
-    
+
             // Call the function on page load
             adjustTableHeaders();
-    
+
             // Add event listener for window resize
             window.addEventListener('resize', adjustTableHeaders);
-    
+
             // Setup default tab on page load
             const defaultTab = document.querySelector('.buttonTab.active');
             if (defaultTab) {
                 const defaultTabName = defaultTab.getAttribute('onclick').match(/'([^']+)'/)[1];
                 openTab(defaultTabName, defaultTab);
             }
-    
-            // Tab switching logic
-            function openTab(tabName, element) {
-                // Hide all elements with class="tab"
-                const tabs = document.getElementsByClassName("tab");
-                for (let i = 0; i < tabs.length; i++) {
-                    tabs[i].style.display = "none";
-                }
-    
-                // Remove the class "active" from all elements with class="buttonTab"
-                const tabButtons = document.getElementsByClassName("buttonTab");
-                for (let i = 0; i < tabButtons.length; i++) {
-                    tabButtons[i].classList.remove("active");
-                }
-    
-                // Show the current tab, and add an "active" class to the button that opened the tab
-                document.getElementById(tabName).style.display = "block";
-                element.classList.add("active");
+
+        }); // Closing the DOMContentLoaded event listener
+
+        // Move the openTab function to the global scope
+        // Tab switching logic
+        function openTab(tabName, element) {
+            // Hide all elements with class="tab"
+            const tabs = document.getElementsByClassName("tab");
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = "none";
             }
-        });
+
+            // Remove the class "active" from all elements with class="buttonTab"
+            const tabButtons = document.getElementsByClassName("buttonTab");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            element.classList.add("active");
+        }
     </script>
-    
-    
     
 </body>
 </html>
