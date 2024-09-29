@@ -239,11 +239,14 @@
             function adjustTableHeaders() {
                 const screenWidth = window.innerWidth;
                 const positionHeader = document.querySelector('#driverStandings thead th:first-child');
-                if (positionHeader) {
+                const pointsHeader = document.querySelector('#driverStandings thead th:last-child');
+                if (positionHeader && pointsHeader) {
                     if (screenWidth <= 768) {
                         positionHeader.textContent = 'Pos';
+                        pointsHeader.textContent = 'Pts';
                     } else {
                         positionHeader.textContent = 'Position';
+                        pointsHeader.textContent = 'Points';
                     }
                 }
             }
@@ -281,6 +284,7 @@
             }
         });
     </script>
+    
     
     
 </body>
