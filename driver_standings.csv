@@ -1,15 +1,15 @@
 Position,Driver,Nationality,Team,Points
-1,Max Verstappen,NED,Red Bull Racing Honda RBPT,429
-2,Lando Norris,GBR,McLaren Mercedes,349
-3,Charles Leclerc,MON,Ferrari,341
-4,Oscar Piastri,AUS,McLaren Mercedes,291
-5,Carlos Sainz,ESP,Ferrari,272
-6,George Russell,GBR,Mercedes,235
-7,Lewis Hamilton,GBR,Mercedes,211
+1,Max Verstappen,NED,Red Bull Racing Honda RBPT,437
+2,Lando Norris,GBR,McLaren Mercedes,374
+3,Charles Leclerc,MON,Ferrari,356
+4,Oscar Piastri,AUS,McLaren Mercedes,292
+5,Carlos Sainz,ESP,Ferrari,290
+6,George Russell,GBR,Mercedes,245
+7,Lewis Hamilton,GBR,Mercedes,223
 8,Sergio Perez,MEX,Red Bull Racing Honda RBPT,152
-9,Fernando Alonso,ESP,Aston Martin Aramco Mercedes,68
-10,Nico Hulkenberg,GER,Haas Ferrari,37
-11,Pierre Gasly,FRA,Alpine Renault,36
+9,Fernando Alonso,ESP,Aston Martin Aramco Mercedes,70
+10,Pierre Gasly,FRA,Alpine Renault,42
+11,Nico Hulkenberg,GER,Haas Ferrari,41
 12,Yuki Tsunoda,JPN,RB Honda RBPT,30
 13,Lance Stroll,CAN,Aston Martin Aramco Mercedes,24
 14,Esteban Ocon,FRA,Alpine Renault,23
@@ -22,3 +22,4 @@ Position,Driver,Nationality,Team,Points
 21,Liam Lawson,NZL,RB Honda RBPT,4
 22,Valtteri Bottas,FIN,Kick Sauber Ferrari,0
 23,Logan Sargeant,USA,Williams Mercedes,0
+24,Jack Doohan,AUS,Alpine Renault,0
