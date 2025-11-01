@@ -1,22 +1,22 @@
 Position,Driver,Nationality,Team,Points
-1,Osca,AUS,McLaren,324
+1,O,AUS,McLaren,324
 2,Lan,GBR,McLaren,299
-3,Max V,NED,Red Bull Racing,255
-4,Georg,GBR,Mercedes,212
-5,Charle,MON,Ferrari,165
-6,Lewis,GBR,Ferrari,121
-7,Kimi ,ITA,Mercedes,78
-8,Alexan,THA,Williams,70
+3,Ma,NED,Red Bull Racing,255
+4,Ge,GBR,Mercedes,212
+5,Cha,MON,Ferrari,165
+6,Le,GBR,Ferrari,121
+7,Ki,ITA,Mercedes,78
+8,Ale,THA,Williams,70
 9,Isa,FRA,Racing Bulls,39
-10,Nico H,GER,Kick Sauber,37
+10,Nic,GER,Kick Sauber,37
 11,Lan,CAN,Aston Martin,32
 12,Car,ESP,Williams,31
 13,Li,NZL,Racing Bulls,30
-14,Fernan,ESP,Aston Martin,30
+14,Fer,ESP,Aston Martin,30
 15,Est,FRA,Haas,28
 16,Pie,FRA,Alpine,20
 17,Yuk,JPN,Red Bull Racing,20
-18,Gabriel ,BRA,Kick Sauber,18
-19,Olive,GBR,Haas,16
-20,Franco ,ARG,Alpine,0
+18,Gabri,BRA,Kick Sauber,18
+19,Ol,GBR,Haas,16
+20,Fran,ARG,Alpine,0
 21,Ja,AUS,Alpine,0
